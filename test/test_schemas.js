@@ -1,15 +1,23 @@
-import {ListSchema} from '../src/index.js';
-import {isNumber} from 'lodash';
-import {List} from 'immutable';
+import {ListSchema, MapSchema} from '../src/index.js';
+import {isString, isNumber} from 'lodash';
+import {List, Map} from 'immutable';
 import assert from 'assert';
 
 
 describe('ListSchema', function() {
-    it('simple number can be validated', function() {
+    it('validates simple conditions', function() {
         assert.ok(ListSchema(isNumber)(List.of(4)));
     });
 
-    it('strings arent numbers', function() {
+    it('notices when strings arent numbers', function() {
         assert.ok(false === ListSchema(isNumber)(List.of('hi')));
+    });
+});
+
+
+describe('MapSchema', function() {
+    it('validates simple maps', function() {
+        const schema = MapSchema(isString, isNumber);
+        assert.ok(schema(Map({'hi': 5})));
     });
 });
