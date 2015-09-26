@@ -13,5 +13,16 @@
   "dependencies": {
     "immutable": "^3.7.5",
     "lodash": "^3.10.1"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify"
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.2.0"
   }
 }
