@@ -5,7 +5,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mochify"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "babelify": "^6.3.0",
-    "browserify": "^11.2.0"
+    "browserify": "^11.2.0",
+    "mochify": "^2.13.0"
   }
 }
