@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "immutable": "^3.7.5"
+    "immutable": "^3.7.5",
+    "lodash": "^3.10.1"
   }
 }
