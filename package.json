@@ -1,8 +1,12 @@
 {
   "name": "immutable-js-schema",
-  "version": "0.0.1",
-  "private": true,
-  "description": "",
+  "version": "0.1.0",
+  "description": "Schema validator for immutable js structures",
+  "homepage": "https://github.com/duckpunch/immutable-js-schema",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/duckpunch/immutable-js-schema.git"
+  },
   "main": "src/index.js",
   "scripts": {
     "test": "mochify",
