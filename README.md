@@ -1,5 +1,6 @@
 # immutable-js-schema
 
+[![npm](https://img.shields.io/npm/v/immutable-schema.svg)](https://www.npmjs.com/package/immutable-schema)
 [![Build Status](https://travis-ci.org/duckpunch/immutable-js-schema.svg)](https://travis-ci.org/duckpunch/immutable-js-schema)
 [![Dependencies](https://david-dm.org/duckpunch/immutable-js-schema.svg)](https://david-dm.org/duckpunch/immutable-js-schema)
 
