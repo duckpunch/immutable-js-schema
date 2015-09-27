@@ -1,5 +1,5 @@
 {
-  "name": "immutable-js-schema",
+  "name": "immutable-schema",
   "version": "0.1.0",
   "description": "Schema validator for immutable js structures",
   "homepage": "https://github.com/duckpunch/immutable-js-schema",
