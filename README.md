@@ -13,13 +13,13 @@ Schema validator for immutable js structures
 Then,
 
 ```javascript
-import {ListSchema, MapSchema} from 'immutable-schema';
+import {ListSchema, MapSchema, Strict} from 'immutable-schema';
 ```
 
 ## Examples
 
 ```javascript
-const schema = ListSchema(isString, isNumber, v => v === 'greetings');
+const schema = ListSchema(isString, isNumber, Strict('greetings'));
 const list = List.of('hi', 14.5, 'greetings');
 assert.ok(schema(list));
 ```

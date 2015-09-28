@@ -37,3 +37,8 @@ export function ListSchema(...validators) {
         }
     };
 }
+
+
+export function Strict(value) {
+    return candidate => value === candidate;
+}
