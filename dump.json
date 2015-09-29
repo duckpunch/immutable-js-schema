@@ -9,7 +9,7 @@
     "access": null,
     "description": null,
     "lineNumber": 1,
-    "content": "import {chunk, some} from 'lodash';\nimport {Map, List} from 'immutable';\n\n\nfunction checkPair(pair, key, value) {\n    const [key_check, value_check] = pair;\n    return key_check(key) && value_check(value);\n}\n\n\n/**\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n */\nexport function MapSchema(...validators) {\n    const pairs = chunk(validators, 2);\n    if (validators.length % 2 === 1) {\n        throw 'Must have even length of validators';\n    }\n\n    function validatePair(value, key) {\n        return some(pairs, pair => checkPair(pair, key, value));\n    }\n\n    return function(candidate) {\n        if (Map.isMap(candidate)) {\n            return candidate.every(validatePair);\n        } else {\n            return false;\n        }\n    };\n}\n\n\nexport function FixedListSchema(...validators) {\n    return function(candidate) {\n        if (List.isList(candidate) && candidate.size === validators.length) {\n            return candidate.every((value, index) => validators[index](value));\n        } else {\n            return false;\n        }\n    };\n}\n\n\nexport function ListSchema(...validators) {\n    return function(candidate) {\n        if (List.isList(candidate)) {\n            return candidate.every(\n                value => some(validators, validator => validator(value))\n            );\n        } else {\n            return false;\n        }\n    };\n}\n\n\nexport function Strict(value) {\n    return candidate => value === candidate;\n}\n"
+    "content": "import {chunk, some} from 'lodash';\nimport {Map, List} from 'immutable';\n\n\nfunction checkPair(pair, key, value) {\n    const [key_check, value_check] = pair;\n    return key_check(key) && value_check(value);\n}\n\n\n/**\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * @param {function} validators functions in pairs to match with each key-value pair\n * @returns {Boolean} true if valid\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n */\nexport function MapSchema(...validators) {\n    const pairs = chunk(validators, 2);\n    if (validators.length % 2 === 1) {\n        throw 'Must have even length of validators';\n    }\n\n    function validatePair(value, key) {\n        return some(pairs, pair => checkPair(pair, key, value));\n    }\n\n    return function(candidate) {\n        if (Map.isMap(candidate)) {\n            return candidate.every(validatePair);\n        } else {\n            return false;\n        }\n    };\n}\n\n\nexport function FixedListSchema(...validators) {\n    return function(candidate) {\n        if (List.isList(candidate) && candidate.size === validators.length) {\n            return candidate.every((value, index) => validators[index](value));\n        } else {\n            return false;\n        }\n    };\n}\n\n\nexport function ListSchema(...validators) {\n    return function(candidate) {\n        if (List.isList(candidate)) {\n            return candidate.every(\n                value => some(validators, validator => validator(value))\n            );\n        } else {\n            return false;\n        }\n    };\n}\n\n\nexport function Exactly(value) {\n    return candidate => value === candidate;\n}\n\n\nexport function OneOf(...values) {\n    return candidate => some(values, Exactly);\n}\n"
   },
   {
     "kind": "function",
@@ -64,20 +64,35 @@
     "importPath": "immutable-schema",
     "importStyle": "{MapSchema}",
     "description": "Creates a validator function based on passed validator 2-tuples.\n\nKey-value entries in the map must satisfy at least one of the validator tuples.",
-    "lineNumber": 16,
+    "examples": [
+      "var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n\nisValid(Map().set(5, 'hi')); // true\nisValid(Map().set('hi', 'hi')); // false\nisValid(Map().set(5, 'hi').set('foo', 3)); // true"
+    ],
+    "lineNumber": 25,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Boolean} true if valid"
+      }
+    ],
     "params": [
       {
-        "name": "validators",
+        "nullable": null,
         "types": [
-          "...*"
+          "function"
         ],
-        "spread": true
+        "spread": false,
+        "optional": false,
+        "name": "validators",
+        "description": "functions in pairs to match with each key-value pair"
       }
     ],
     "return": {
+      "nullable": null,
       "types": [
-        "*"
-      ]
+        "Boolean"
+      ],
+      "spread": false,
+      "description": "true if valid"
     },
     "generator": false
   },
@@ -93,7 +108,7 @@
     "importPath": "immutable-schema",
     "importStyle": "{FixedListSchema}",
     "description": null,
-    "lineNumber": 36,
+    "lineNumber": 45,
     "undocument": true,
     "params": [
       {
@@ -123,7 +138,7 @@
     "importPath": "immutable-schema",
     "importStyle": "{ListSchema}",
     "description": null,
-    "lineNumber": 47,
+    "lineNumber": 56,
     "undocument": true,
     "params": [
       {
@@ -145,15 +160,15 @@
     "kind": "function",
     "static": true,
     "variation": null,
-    "name": "Strict",
+    "name": "Exactly",
     "memberof": "src/index.js",
-    "longname": "src/index.js~Strict",
+    "longname": "src/index.js~Exactly",
     "access": null,
     "export": true,
     "importPath": "immutable-schema",
-    "importStyle": "{Strict}",
+    "importStyle": "{Exactly}",
     "description": null,
-    "lineNumber": 60,
+    "lineNumber": 69,
     "undocument": true,
     "params": [
       {
@@ -161,6 +176,36 @@
         "types": [
           "*"
         ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "OneOf",
+    "memberof": "src/index.js",
+    "longname": "src/index.js~OneOf",
+    "access": null,
+    "export": true,
+    "importPath": "immutable-schema",
+    "importStyle": "{OneOf}",
+    "description": null,
+    "lineNumber": 74,
+    "undocument": true,
+    "params": [
+      {
+        "name": "values",
+        "types": [
+          "...*"
+        ],
+        "spread": true
       }
     ],
     "return": {

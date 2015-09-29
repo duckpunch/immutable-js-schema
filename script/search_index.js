@@ -1,5 +1,11 @@
 window.esdocSearchIndex = [
   [
+    "immutable-schema~exactly",
+    "function/index.html#static-function-Exactly",
+    "<span>Exactly</span> <span class=\"search-result-import-path\">immutable-schema</span>",
+    "function"
+  ],
+  [
     "immutable-schema~fixedlistschema",
     "function/index.html#static-function-FixedListSchema",
     "<span>FixedListSchema</span> <span class=\"search-result-import-path\">immutable-schema</span>",
@@ -18,9 +24,9 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
-    "immutable-schema~strict",
-    "function/index.html#static-function-Strict",
-    "<span>Strict</span> <span class=\"search-result-import-path\">immutable-schema</span>",
+    "immutable-schema~oneof",
+    "function/index.html#static-function-OneOf",
+    "<span>OneOf</span> <span class=\"search-result-import-path\">immutable-schema</span>",
     "function"
   ],
   [

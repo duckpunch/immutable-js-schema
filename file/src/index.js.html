@@ -36,10 +36,11 @@
   <h2><a href="function/">Function</a></h2>
   <ul>
     
-  <li data-ice="functionDoc"><span><a href="function/index.html#static-function-FixedListSchema">FixedListSchema</a></span></li>
+  <li data-ice="functionDoc"><span><a href="function/index.html#static-function-Exactly">Exactly</a></span></li>
+<li data-ice="functionDoc"><span><a href="function/index.html#static-function-FixedListSchema">FixedListSchema</a></span></li>
 <li data-ice="functionDoc"><span><a href="function/index.html#static-function-ListSchema">ListSchema</a></span></li>
 <li data-ice="functionDoc"><span><a href="function/index.html#static-function-MapSchema">MapSchema</a></span></li>
-<li data-ice="functionDoc"><span><a href="function/index.html#static-function-Strict">Strict</a></span></li>
+<li data-ice="functionDoc"><span><a href="function/index.html#static-function-OneOf">OneOf</a></span></li>
 </ul>
 </div>
 
@@ -65,6 +66,15 @@ function checkPair(pair, key, value) {
  * Creates a validator function based on passed validator 2-tuples.
  *
  * Key-value entries in the map must satisfy at least one of the validator tuples.
+ *
+ * @param {function} validators functions in pairs to match with each key-value pair
+ * @returns {Boolean} true if valid
+ * @example
+ * var isValid = MapSchema(isNumber, Exactly(&apos;hi&apos;), isString, isNumber);
+ *
+ * isValid(Map().set(5, &apos;hi&apos;)); // true
+ * isValid(Map().set(&apos;hi&apos;, &apos;hi&apos;)); // false
+ * isValid(Map().set(5, &apos;hi&apos;).set(&apos;foo&apos;, 3)); // true
  */
 export function MapSchema(...validators) {
     const pairs = chunk(validators, 2);
@@ -110,8 +120,13 @@ export function ListSchema(...validators) {
 }
 
 
-export function Strict(value) {
+export function Exactly(value) {
     return candidate =&gt; value === candidate;
+}
+
+
+export function OneOf(...values) {
+    return candidate =&gt; some(values, Exactly);
 }
 </code></pre>
 
