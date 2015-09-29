@@ -658,10 +658,10 @@
       "trailingComments": [
         {
           "type": "Block",
-          "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * @param {function} validators functions in pairs to match with each key-value pair\n * @returns {Boolean} true if valid\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
+          "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * @param {function} ...validators functions in pairs to match with each key-value pair\n * @returns {function} function returns true if passed a valid Map\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
           "range": [
             210,
-            721
+            755
           ],
           "loc": {
             "start": {
@@ -684,8 +684,8 @@
           "type": "Identifier",
           "name": "MapSchema",
           "range": [
-            738,
-            747
+            772,
+            781
           ],
           "loc": {
             "start": {
@@ -705,8 +705,8 @@
               "type": "Identifier",
               "name": "validators",
               "range": [
-                751,
-                761
+                785,
+                795
               ],
               "loc": {
                 "start": {
@@ -720,8 +720,8 @@
               }
             },
             "range": [
-              748,
-              761
+              782,
+              795
             ],
             "loc": {
               "start": {
@@ -747,8 +747,8 @@
                     "type": "Identifier",
                     "name": "pairs",
                     "range": [
-                      775,
-                      780
+                      809,
+                      814
                     ],
                     "loc": {
                       "start": {
@@ -767,8 +767,8 @@
                       "type": "Identifier",
                       "name": "chunk",
                       "range": [
-                        783,
-                        788
+                        817,
+                        822
                       ],
                       "loc": {
                         "start": {
@@ -786,8 +786,8 @@
                         "type": "Identifier",
                         "name": "validators",
                         "range": [
-                          789,
-                          799
+                          823,
+                          833
                         ],
                         "loc": {
                           "start": {
@@ -805,8 +805,8 @@
                         "value": 2,
                         "raw": "2",
                         "range": [
-                          801,
-                          802
+                          835,
+                          836
                         ],
                         "loc": {
                           "start": {
@@ -821,8 +821,8 @@
                       }
                     ],
                     "range": [
-                      783,
-                      803
+                      817,
+                      837
                     ],
                     "loc": {
                       "start": {
@@ -836,8 +836,8 @@
                     }
                   },
                   "range": [
-                    775,
-                    803
+                    809,
+                    837
                   ],
                   "loc": {
                     "start": {
@@ -853,8 +853,8 @@
               ],
               "kind": "const",
               "range": [
-                769,
-                804
+                803,
+                838
               ],
               "loc": {
                 "start": {
@@ -882,8 +882,8 @@
                       "type": "Identifier",
                       "name": "validators",
                       "range": [
-                        813,
-                        823
+                        847,
+                        857
                       ],
                       "loc": {
                         "start": {
@@ -900,8 +900,8 @@
                       "type": "Identifier",
                       "name": "length",
                       "range": [
-                        824,
-                        830
+                        858,
+                        864
                       ],
                       "loc": {
                         "start": {
@@ -915,8 +915,8 @@
                       }
                     },
                     "range": [
-                      813,
-                      830
+                      847,
+                      864
                     ],
                     "loc": {
                       "start": {
@@ -934,8 +934,8 @@
                     "value": 2,
                     "raw": "2",
                     "range": [
-                      833,
-                      834
+                      867,
+                      868
                     ],
                     "loc": {
                       "start": {
@@ -949,8 +949,8 @@
                     }
                   },
                   "range": [
-                    813,
-                    834
+                    847,
+                    868
                   ],
                   "loc": {
                     "start": {
@@ -968,8 +968,8 @@
                   "value": 1,
                   "raw": "1",
                   "range": [
-                    839,
-                    840
+                    873,
+                    874
                   ],
                   "loc": {
                     "start": {
@@ -983,8 +983,8 @@
                   }
                 },
                 "range": [
-                  813,
-                  840
+                  847,
+                  874
                 ],
                 "loc": {
                   "start": {
@@ -1007,8 +1007,8 @@
                       "value": "Must have even length of validators",
                       "raw": "'Must have even length of validators'",
                       "range": [
-                        858,
-                        895
+                        892,
+                        929
                       ],
                       "loc": {
                         "start": {
@@ -1022,8 +1022,8 @@
                       }
                     },
                     "range": [
-                      852,
-                      896
+                      886,
+                      930
                     ],
                     "loc": {
                       "start": {
@@ -1038,8 +1038,8 @@
                   }
                 ],
                 "range": [
-                  842,
-                  902
+                  876,
+                  936
                 ],
                 "loc": {
                   "start": {
@@ -1054,8 +1054,8 @@
               },
               "alternate": null,
               "range": [
-                809,
-                902
+                843,
+                936
               ],
               "loc": {
                 "start": {
@@ -1074,8 +1074,8 @@
                 "type": "Identifier",
                 "name": "validatePair",
                 "range": [
-                  917,
-                  929
+                  951,
+                  963
                 ],
                 "loc": {
                   "start": {
@@ -1093,8 +1093,8 @@
                   "type": "Identifier",
                   "name": "value",
                   "range": [
-                    930,
-                    935
+                    964,
+                    969
                   ],
                   "loc": {
                     "start": {
@@ -1111,8 +1111,8 @@
                   "type": "Identifier",
                   "name": "key",
                   "range": [
-                    937,
-                    940
+                    971,
+                    974
                   ],
                   "loc": {
                     "start": {
@@ -1137,8 +1137,8 @@
                         "type": "Identifier",
                         "name": "some",
                         "range": [
-                          959,
-                          963
+                          993,
+                          997
                         ],
                         "loc": {
                           "start": {
@@ -1156,8 +1156,8 @@
                           "type": "Identifier",
                           "name": "pairs",
                           "range": [
-                            964,
-                            969
+                            998,
+                            1003
                           ],
                           "loc": {
                             "start": {
@@ -1178,8 +1178,8 @@
                               "type": "Identifier",
                               "name": "pair",
                               "range": [
-                                971,
-                                975
+                                1005,
+                                1009
                               ],
                               "loc": {
                                 "start": {
@@ -1199,8 +1199,8 @@
                               "type": "Identifier",
                               "name": "checkPair",
                               "range": [
-                                979,
-                                988
+                                1013,
+                                1022
                               ],
                               "loc": {
                                 "start": {
@@ -1218,8 +1218,8 @@
                                 "type": "Identifier",
                                 "name": "pair",
                                 "range": [
-                                  989,
-                                  993
+                                  1023,
+                                  1027
                                 ],
                                 "loc": {
                                   "start": {
@@ -1236,8 +1236,8 @@
                                 "type": "Identifier",
                                 "name": "key",
                                 "range": [
-                                  995,
-                                  998
+                                  1029,
+                                  1032
                                 ],
                                 "loc": {
                                   "start": {
@@ -1254,8 +1254,8 @@
                                 "type": "Identifier",
                                 "name": "value",
                                 "range": [
-                                  1000,
-                                  1005
+                                  1034,
+                                  1039
                                 ],
                                 "loc": {
                                   "start": {
@@ -1270,8 +1270,8 @@
                               }
                             ],
                             "range": [
-                              979,
-                              1006
+                              1013,
+                              1040
                             ],
                             "loc": {
                               "start": {
@@ -1287,8 +1287,8 @@
                           "generator": false,
                           "expression": true,
                           "range": [
-                            971,
-                            1006
+                            1005,
+                            1040
                           ],
                           "loc": {
                             "start": {
@@ -1303,8 +1303,8 @@
                         }
                       ],
                       "range": [
-                        959,
-                        1007
+                        993,
+                        1041
                       ],
                       "loc": {
                         "start": {
@@ -1318,8 +1318,8 @@
                       }
                     },
                     "range": [
-                      952,
-                      1008
+                      986,
+                      1042
                     ],
                     "loc": {
                       "start": {
@@ -1334,8 +1334,8 @@
                   }
                 ],
                 "range": [
-                  942,
-                  1014
+                  976,
+                  1048
                 ],
                 "loc": {
                   "start": {
@@ -1351,8 +1351,8 @@
               "generator": false,
               "expression": false,
               "range": [
-                908,
-                1014
+                942,
+                1048
               ],
               "loc": {
                 "start": {
@@ -1375,8 +1375,8 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      1036,
-                      1045
+                      1070,
+                      1079
                     ],
                     "loc": {
                       "start": {
@@ -1404,8 +1404,8 @@
                             "type": "Identifier",
                             "name": "Map",
                             "range": [
-                              1061,
-                              1064
+                              1095,
+                              1098
                             ],
                             "loc": {
                               "start": {
@@ -1422,8 +1422,8 @@
                             "type": "Identifier",
                             "name": "isMap",
                             "range": [
-                              1065,
-                              1070
+                              1099,
+                              1104
                             ],
                             "loc": {
                               "start": {
@@ -1437,8 +1437,8 @@
                             }
                           },
                           "range": [
-                            1061,
-                            1070
+                            1095,
+                            1104
                           ],
                           "loc": {
                             "start": {
@@ -1456,8 +1456,8 @@
                             "type": "Identifier",
                             "name": "candidate",
                             "range": [
-                              1071,
-                              1080
+                              1105,
+                              1114
                             ],
                             "loc": {
                               "start": {
@@ -1472,8 +1472,8 @@
                           }
                         ],
                         "range": [
-                          1061,
-                          1081
+                          1095,
+                          1115
                         ],
                         "loc": {
                           "start": {
@@ -1500,8 +1500,8 @@
                                   "type": "Identifier",
                                   "name": "candidate",
                                   "range": [
-                                    1104,
-                                    1113
+                                    1138,
+                                    1147
                                   ],
                                   "loc": {
                                     "start": {
@@ -1518,8 +1518,8 @@
                                   "type": "Identifier",
                                   "name": "every",
                                   "range": [
-                                    1114,
-                                    1119
+                                    1148,
+                                    1153
                                   ],
                                   "loc": {
                                     "start": {
@@ -1533,8 +1533,8 @@
                                   }
                                 },
                                 "range": [
-                                  1104,
-                                  1119
+                                  1138,
+                                  1153
                                 ],
                                 "loc": {
                                   "start": {
@@ -1552,8 +1552,8 @@
                                   "type": "Identifier",
                                   "name": "validatePair",
                                   "range": [
-                                    1120,
-                                    1132
+                                    1154,
+                                    1166
                                   ],
                                   "loc": {
                                     "start": {
@@ -1568,8 +1568,8 @@
                                 }
                               ],
                               "range": [
-                                1104,
-                                1133
+                                1138,
+                                1167
                               ],
                               "loc": {
                                 "start": {
@@ -1583,8 +1583,8 @@
                               }
                             },
                             "range": [
-                              1097,
-                              1134
+                              1131,
+                              1168
                             ],
                             "loc": {
                               "start": {
@@ -1599,8 +1599,8 @@
                           }
                         ],
                         "range": [
-                          1083,
-                          1144
+                          1117,
+                          1178
                         ],
                         "loc": {
                           "start": {
@@ -1623,8 +1623,8 @@
                               "value": false,
                               "raw": "false",
                               "range": [
-                                1171,
-                                1176
+                                1205,
+                                1210
                               ],
                               "loc": {
                                 "start": {
@@ -1638,8 +1638,8 @@
                               }
                             },
                             "range": [
-                              1164,
-                              1177
+                              1198,
+                              1211
                             ],
                             "loc": {
                               "start": {
@@ -1654,8 +1654,8 @@
                           }
                         ],
                         "range": [
-                          1150,
-                          1187
+                          1184,
+                          1221
                         ],
                         "loc": {
                           "start": {
@@ -1669,8 +1669,8 @@
                         }
                       },
                       "range": [
-                        1057,
-                        1187
+                        1091,
+                        1221
                       ],
                       "loc": {
                         "start": {
@@ -1685,8 +1685,8 @@
                     }
                   ],
                   "range": [
-                    1047,
-                    1193
+                    1081,
+                    1227
                   ],
                   "loc": {
                     "start": {
@@ -1702,8 +1702,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  1027,
-                  1193
+                  1061,
+                  1227
                 ],
                 "loc": {
                   "start": {
@@ -1717,8 +1717,8 @@
                 }
               },
               "range": [
-                1020,
-                1194
+                1054,
+                1228
               ],
               "loc": {
                 "start": {
@@ -1733,8 +1733,8 @@
             }
           ],
           "range": [
-            763,
-            1196
+            797,
+            1230
           ],
           "loc": {
             "start": {
@@ -1750,8 +1750,8 @@
         "generator": false,
         "expression": false,
         "range": [
-          729,
-          1196
+          763,
+          1230
         ],
         "loc": {
           "start": {
@@ -1766,10 +1766,10 @@
         "leadingComments": [
           {
             "type": "Block",
-            "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * @param {function} validators functions in pairs to match with each key-value pair\n * @returns {Boolean} true if valid\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
+            "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * @param {function} ...validators functions in pairs to match with each key-value pair\n * @returns {function} function returns true if passed a valid Map\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
             "range": [
               210,
-              721
+              755
             ],
             "loc": {
               "start": {
@@ -1783,13 +1783,32 @@
             }
           }
         ],
-        "trailingComments": []
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
+            "range": [
+              1233,
+              1754
+            ],
+            "loc": {
+              "start": {
+                "line": 45,
+                "column": 0
+              },
+              "end": {
+                "line": 58,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       "specifiers": [],
       "source": null,
       "range": [
-        722,
-        1196
+        756,
+        1230
       ],
       "loc": {
         "start": {
@@ -1804,10 +1823,10 @@
       "leadingComments": [
         {
           "type": "Block",
-          "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * @param {function} validators functions in pairs to match with each key-value pair\n * @returns {Boolean} true if valid\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
+          "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * @param {function} ...validators functions in pairs to match with each key-value pair\n * @returns {function} function returns true if passed a valid Map\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
           "range": [
             210,
-            721
+            755
           ],
           "loc": {
             "start": {
@@ -1816,6 +1835,26 @@
             },
             "end": {
               "line": 24,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
+          "range": [
+            1233,
+            1754
+          ],
+          "loc": {
+            "start": {
+              "line": 45,
+              "column": 0
+            },
+            "end": {
+              "line": 58,
               "column": 3
             }
           }
@@ -1830,16 +1869,16 @@
           "type": "Identifier",
           "name": "FixedListSchema",
           "range": [
-            1215,
-            1230
+            1771,
+            1786
           ],
           "loc": {
             "start": {
-              "line": 45,
+              "line": 59,
               "column": 16
             },
             "end": {
-              "line": 45,
+              "line": 59,
               "column": 31
             }
           }
@@ -1851,31 +1890,31 @@
               "type": "Identifier",
               "name": "validators",
               "range": [
-                1234,
-                1244
+                1790,
+                1800
               ],
               "loc": {
                 "start": {
-                  "line": 45,
+                  "line": 59,
                   "column": 35
                 },
                 "end": {
-                  "line": 45,
+                  "line": 59,
                   "column": 45
                 }
               }
             },
             "range": [
-              1231,
-              1244
+              1787,
+              1800
             ],
             "loc": {
               "start": {
-                "line": 45,
+                "line": 59,
                 "column": 32
               },
               "end": {
-                "line": 45,
+                "line": 59,
                 "column": 45
               }
             }
@@ -1894,16 +1933,16 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      1268,
-                      1277
+                      1824,
+                      1833
                     ],
                     "loc": {
                       "start": {
-                        "line": 46,
+                        "line": 60,
                         "column": 20
                       },
                       "end": {
-                        "line": 46,
+                        "line": 60,
                         "column": 29
                       }
                     }
@@ -1926,16 +1965,16 @@
                               "type": "Identifier",
                               "name": "List",
                               "range": [
-                                1293,
-                                1297
+                                1849,
+                                1853
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 12
                                 },
                                 "end": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 16
                                 }
                               }
@@ -1944,31 +1983,31 @@
                               "type": "Identifier",
                               "name": "isList",
                               "range": [
-                                1298,
-                                1304
+                                1854,
+                                1860
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 17
                                 },
                                 "end": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 23
                                 }
                               }
                             },
                             "range": [
-                              1293,
-                              1304
+                              1849,
+                              1860
                             ],
                             "loc": {
                               "start": {
-                                "line": 47,
+                                "line": 61,
                                 "column": 12
                               },
                               "end": {
-                                "line": 47,
+                                "line": 61,
                                 "column": 23
                               }
                             }
@@ -1978,32 +2017,32 @@
                               "type": "Identifier",
                               "name": "candidate",
                               "range": [
-                                1305,
-                                1314
+                                1861,
+                                1870
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 24
                                 },
                                 "end": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 33
                                 }
                               }
                             }
                           ],
                           "range": [
-                            1293,
-                            1315
+                            1849,
+                            1871
                           ],
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 61,
                               "column": 12
                             },
                             "end": {
-                              "line": 47,
+                              "line": 61,
                               "column": 34
                             }
                           }
@@ -2018,16 +2057,16 @@
                               "type": "Identifier",
                               "name": "candidate",
                               "range": [
-                                1319,
-                                1328
+                                1875,
+                                1884
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 38
                                 },
                                 "end": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 47
                                 }
                               }
@@ -2036,31 +2075,31 @@
                               "type": "Identifier",
                               "name": "size",
                               "range": [
-                                1329,
-                                1333
+                                1885,
+                                1889
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 48
                                 },
                                 "end": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 52
                                 }
                               }
                             },
                             "range": [
-                              1319,
-                              1333
+                              1875,
+                              1889
                             ],
                             "loc": {
                               "start": {
-                                "line": 47,
+                                "line": 61,
                                 "column": 38
                               },
                               "end": {
-                                "line": 47,
+                                "line": 61,
                                 "column": 52
                               }
                             }
@@ -2072,16 +2111,16 @@
                               "type": "Identifier",
                               "name": "validators",
                               "range": [
-                                1338,
-                                1348
+                                1894,
+                                1904
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 57
                                 },
                                 "end": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 67
                                 }
                               }
@@ -2090,61 +2129,61 @@
                               "type": "Identifier",
                               "name": "length",
                               "range": [
-                                1349,
-                                1355
+                                1905,
+                                1911
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 68
                                 },
                                 "end": {
-                                  "line": 47,
+                                  "line": 61,
                                   "column": 74
                                 }
                               }
                             },
                             "range": [
-                              1338,
-                              1355
+                              1894,
+                              1911
                             ],
                             "loc": {
                               "start": {
-                                "line": 47,
+                                "line": 61,
                                 "column": 57
                               },
                               "end": {
-                                "line": 47,
+                                "line": 61,
                                 "column": 74
                               }
                             }
                           },
                           "range": [
-                            1319,
-                            1355
+                            1875,
+                            1911
                           ],
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 61,
                               "column": 38
                             },
                             "end": {
-                              "line": 47,
+                              "line": 61,
                               "column": 74
                             }
                           }
                         },
                         "range": [
-                          1293,
-                          1355
+                          1849,
+                          1911
                         ],
                         "loc": {
                           "start": {
-                            "line": 47,
+                            "line": 61,
                             "column": 12
                           },
                           "end": {
-                            "line": 47,
+                            "line": 61,
                             "column": 74
                           }
                         }
@@ -2163,16 +2202,16 @@
                                   "type": "Identifier",
                                   "name": "candidate",
                                   "range": [
-                                    1378,
-                                    1387
+                                    1934,
+                                    1943
                                   ],
                                   "loc": {
                                     "start": {
-                                      "line": 48,
+                                      "line": 62,
                                       "column": 19
                                     },
                                     "end": {
-                                      "line": 48,
+                                      "line": 62,
                                       "column": 28
                                     }
                                   }
@@ -2181,31 +2220,31 @@
                                   "type": "Identifier",
                                   "name": "every",
                                   "range": [
-                                    1388,
-                                    1393
+                                    1944,
+                                    1949
                                   ],
                                   "loc": {
                                     "start": {
-                                      "line": 48,
+                                      "line": 62,
                                       "column": 29
                                     },
                                     "end": {
-                                      "line": 48,
+                                      "line": 62,
                                       "column": 34
                                     }
                                   }
                                 },
                                 "range": [
-                                  1378,
-                                  1393
+                                  1934,
+                                  1949
                                 ],
                                 "loc": {
                                   "start": {
-                                    "line": 48,
+                                    "line": 62,
                                     "column": 19
                                   },
                                   "end": {
-                                    "line": 48,
+                                    "line": 62,
                                     "column": 34
                                   }
                                 }
@@ -2219,16 +2258,16 @@
                                       "type": "Identifier",
                                       "name": "value",
                                       "range": [
-                                        1395,
-                                        1400
+                                        1951,
+                                        1956
                                       ],
                                       "loc": {
                                         "start": {
-                                          "line": 48,
+                                          "line": 62,
                                           "column": 36
                                         },
                                         "end": {
-                                          "line": 48,
+                                          "line": 62,
                                           "column": 41
                                         }
                                       }
@@ -2237,16 +2276,16 @@
                                       "type": "Identifier",
                                       "name": "index",
                                       "range": [
-                                        1402,
-                                        1407
+                                        1958,
+                                        1963
                                       ],
                                       "loc": {
                                         "start": {
-                                          "line": 48,
+                                          "line": 62,
                                           "column": 43
                                         },
                                         "end": {
-                                          "line": 48,
+                                          "line": 62,
                                           "column": 48
                                         }
                                       }
@@ -2261,16 +2300,16 @@
                                         "type": "Identifier",
                                         "name": "validators",
                                         "range": [
-                                          1412,
-                                          1422
+                                          1968,
+                                          1978
                                         ],
                                         "loc": {
                                           "start": {
-                                            "line": 48,
+                                            "line": 62,
                                             "column": 53
                                           },
                                           "end": {
-                                            "line": 48,
+                                            "line": 62,
                                             "column": 63
                                           }
                                         }
@@ -2279,31 +2318,31 @@
                                         "type": "Identifier",
                                         "name": "index",
                                         "range": [
-                                          1423,
-                                          1428
+                                          1979,
+                                          1984
                                         ],
                                         "loc": {
                                           "start": {
-                                            "line": 48,
+                                            "line": 62,
                                             "column": 64
                                           },
                                           "end": {
-                                            "line": 48,
+                                            "line": 62,
                                             "column": 69
                                           }
                                         }
                                       },
                                       "range": [
-                                        1412,
-                                        1429
+                                        1968,
+                                        1985
                                       ],
                                       "loc": {
                                         "start": {
-                                          "line": 48,
+                                          "line": 62,
                                           "column": 53
                                         },
                                         "end": {
-                                          "line": 48,
+                                          "line": 62,
                                           "column": 70
                                         }
                                       }
@@ -2313,32 +2352,32 @@
                                         "type": "Identifier",
                                         "name": "value",
                                         "range": [
-                                          1430,
-                                          1435
+                                          1986,
+                                          1991
                                         ],
                                         "loc": {
                                           "start": {
-                                            "line": 48,
+                                            "line": 62,
                                             "column": 71
                                           },
                                           "end": {
-                                            "line": 48,
+                                            "line": 62,
                                             "column": 76
                                           }
                                         }
                                       }
                                     ],
                                     "range": [
-                                      1412,
-                                      1436
+                                      1968,
+                                      1992
                                     ],
                                     "loc": {
                                       "start": {
-                                        "line": 48,
+                                        "line": 62,
                                         "column": 53
                                       },
                                       "end": {
-                                        "line": 48,
+                                        "line": 62,
                                         "column": 77
                                       }
                                     }
@@ -2346,63 +2385,63 @@
                                   "generator": false,
                                   "expression": true,
                                   "range": [
-                                    1394,
-                                    1436
+                                    1950,
+                                    1992
                                   ],
                                   "loc": {
                                     "start": {
-                                      "line": 48,
+                                      "line": 62,
                                       "column": 35
                                     },
                                     "end": {
-                                      "line": 48,
+                                      "line": 62,
                                       "column": 77
                                     }
                                   }
                                 }
                               ],
                               "range": [
-                                1378,
-                                1437
+                                1934,
+                                1993
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 48,
+                                  "line": 62,
                                   "column": 19
                                 },
                                 "end": {
-                                  "line": 48,
+                                  "line": 62,
                                   "column": 78
                                 }
                               }
                             },
                             "range": [
-                              1371,
-                              1438
+                              1927,
+                              1994
                             ],
                             "loc": {
                               "start": {
-                                "line": 48,
+                                "line": 62,
                                 "column": 12
                               },
                               "end": {
-                                "line": 48,
+                                "line": 62,
                                 "column": 79
                               }
                             }
                           }
                         ],
                         "range": [
-                          1357,
-                          1448
+                          1913,
+                          2004
                         ],
                         "loc": {
                           "start": {
-                            "line": 47,
+                            "line": 61,
                             "column": 76
                           },
                           "end": {
-                            "line": 49,
+                            "line": 63,
                             "column": 9
                           }
                         }
@@ -2417,78 +2456,78 @@
                               "value": false,
                               "raw": "false",
                               "range": [
-                                1475,
-                                1480
+                                2031,
+                                2036
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 50,
+                                  "line": 64,
                                   "column": 19
                                 },
                                 "end": {
-                                  "line": 50,
+                                  "line": 64,
                                   "column": 24
                                 }
                               }
                             },
                             "range": [
-                              1468,
-                              1481
+                              2024,
+                              2037
                             ],
                             "loc": {
                               "start": {
-                                "line": 50,
+                                "line": 64,
                                 "column": 12
                               },
                               "end": {
-                                "line": 50,
+                                "line": 64,
                                 "column": 25
                               }
                             }
                           }
                         ],
                         "range": [
-                          1454,
-                          1491
+                          2010,
+                          2047
                         ],
                         "loc": {
                           "start": {
-                            "line": 49,
+                            "line": 63,
                             "column": 15
                           },
                           "end": {
-                            "line": 51,
+                            "line": 65,
                             "column": 9
                           }
                         }
                       },
                       "range": [
-                        1289,
-                        1491
+                        1845,
+                        2047
                       ],
                       "loc": {
                         "start": {
-                          "line": 47,
+                          "line": 61,
                           "column": 8
                         },
                         "end": {
-                          "line": 51,
+                          "line": 65,
                           "column": 9
                         }
                       }
                     }
                   ],
                   "range": [
-                    1279,
-                    1497
+                    1835,
+                    2053
                   ],
                   "loc": {
                     "start": {
-                      "line": 46,
+                      "line": 60,
                       "column": 31
                     },
                     "end": {
-                      "line": 52,
+                      "line": 66,
                       "column": 5
                     }
                   }
@@ -2496,47 +2535,47 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  1259,
-                  1497
+                  1815,
+                  2053
                 ],
                 "loc": {
                   "start": {
-                    "line": 46,
+                    "line": 60,
                     "column": 11
                   },
                   "end": {
-                    "line": 52,
+                    "line": 66,
                     "column": 5
                   }
                 }
               },
               "range": [
-                1252,
-                1498
+                1808,
+                2054
               ],
               "loc": {
                 "start": {
-                  "line": 46,
+                  "line": 60,
                   "column": 4
                 },
                 "end": {
-                  "line": 52,
+                  "line": 66,
                   "column": 6
                 }
               }
             }
           ],
           "range": [
-            1246,
-            1500
+            1802,
+            2056
           ],
           "loc": {
             "start": {
-              "line": 45,
+              "line": 59,
               "column": 47
             },
             "end": {
-              "line": 53,
+              "line": 67,
               "column": 1
             }
           }
@@ -2544,38 +2583,116 @@
         "generator": false,
         "expression": false,
         "range": [
-          1206,
-          1500
+          1762,
+          2056
         ],
         "loc": {
           "start": {
-            "line": 45,
+            "line": 59,
             "column": 7
           },
           "end": {
-            "line": 53,
+            "line": 67,
             "column": 1
           }
         },
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
+            "range": [
+              1233,
+              1754
+            ],
+            "loc": {
+              "start": {
+                "line": 45,
+                "column": 0
+              },
+              "end": {
+                "line": 58,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
+            "range": [
+              2059,
+              2549
+            ],
+            "loc": {
+              "start": {
+                "line": 70,
+                "column": 0
+              },
+              "end": {
+                "line": 82,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       "specifiers": [],
       "source": null,
       "range": [
-        1199,
-        1500
+        1755,
+        2056
       ],
       "loc": {
         "start": {
-          "line": 45,
+          "line": 59,
           "column": 0
         },
         "end": {
-          "line": 53,
+          "line": 67,
           "column": 1
         }
-      }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
+          "range": [
+            1233,
+            1754
+          ],
+          "loc": {
+            "start": {
+              "line": 45,
+              "column": 0
+            },
+            "end": {
+              "line": 58,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
+          "range": [
+            2059,
+            2549
+          ],
+          "loc": {
+            "start": {
+              "line": 70,
+              "column": 0
+            },
+            "end": {
+              "line": 82,
+              "column": 3
+            }
+          }
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
@@ -2585,16 +2702,16 @@
           "type": "Identifier",
           "name": "ListSchema",
           "range": [
-            1519,
-            1529
+            2566,
+            2576
           ],
           "loc": {
             "start": {
-              "line": 56,
+              "line": 83,
               "column": 16
             },
             "end": {
-              "line": 56,
+              "line": 83,
               "column": 26
             }
           }
@@ -2606,31 +2723,31 @@
               "type": "Identifier",
               "name": "validators",
               "range": [
-                1533,
-                1543
+                2580,
+                2590
               ],
               "loc": {
                 "start": {
-                  "line": 56,
+                  "line": 83,
                   "column": 30
                 },
                 "end": {
-                  "line": 56,
+                  "line": 83,
                   "column": 40
                 }
               }
             },
             "range": [
-              1530,
-              1543
+              2577,
+              2590
             ],
             "loc": {
               "start": {
-                "line": 56,
+                "line": 83,
                 "column": 27
               },
               "end": {
-                "line": 56,
+                "line": 83,
                 "column": 40
               }
             }
@@ -2649,16 +2766,16 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      1567,
-                      1576
+                      2614,
+                      2623
                     ],
                     "loc": {
                       "start": {
-                        "line": 57,
+                        "line": 84,
                         "column": 20
                       },
                       "end": {
-                        "line": 57,
+                        "line": 84,
                         "column": 29
                       }
                     }
@@ -2678,16 +2795,16 @@
                             "type": "Identifier",
                             "name": "List",
                             "range": [
-                              1592,
-                              1596
+                              2639,
+                              2643
                             ],
                             "loc": {
                               "start": {
-                                "line": 58,
+                                "line": 85,
                                 "column": 12
                               },
                               "end": {
-                                "line": 58,
+                                "line": 85,
                                 "column": 16
                               }
                             }
@@ -2696,31 +2813,31 @@
                             "type": "Identifier",
                             "name": "isList",
                             "range": [
-                              1597,
-                              1603
+                              2644,
+                              2650
                             ],
                             "loc": {
                               "start": {
-                                "line": 58,
+                                "line": 85,
                                 "column": 17
                               },
                               "end": {
-                                "line": 58,
+                                "line": 85,
                                 "column": 23
                               }
                             }
                           },
                           "range": [
-                            1592,
-                            1603
+                            2639,
+                            2650
                           ],
                           "loc": {
                             "start": {
-                              "line": 58,
+                              "line": 85,
                               "column": 12
                             },
                             "end": {
-                              "line": 58,
+                              "line": 85,
                               "column": 23
                             }
                           }
@@ -2730,32 +2847,32 @@
                             "type": "Identifier",
                             "name": "candidate",
                             "range": [
-                              1604,
-                              1613
+                              2651,
+                              2660
                             ],
                             "loc": {
                               "start": {
-                                "line": 58,
+                                "line": 85,
                                 "column": 24
                               },
                               "end": {
-                                "line": 58,
+                                "line": 85,
                                 "column": 33
                               }
                             }
                           }
                         ],
                         "range": [
-                          1592,
-                          1614
+                          2639,
+                          2661
                         ],
                         "loc": {
                           "start": {
-                            "line": 58,
+                            "line": 85,
                             "column": 12
                           },
                           "end": {
-                            "line": 58,
+                            "line": 85,
                             "column": 34
                           }
                         }
@@ -2774,16 +2891,16 @@
                                   "type": "Identifier",
                                   "name": "candidate",
                                   "range": [
-                                    1637,
-                                    1646
+                                    2684,
+                                    2693
                                   ],
                                   "loc": {
                                     "start": {
-                                      "line": 59,
+                                      "line": 86,
                                       "column": 19
                                     },
                                     "end": {
-                                      "line": 59,
+                                      "line": 86,
                                       "column": 28
                                     }
                                   }
@@ -2792,31 +2909,31 @@
                                   "type": "Identifier",
                                   "name": "every",
                                   "range": [
-                                    1647,
-                                    1652
+                                    2694,
+                                    2699
                                   ],
                                   "loc": {
                                     "start": {
-                                      "line": 59,
+                                      "line": 86,
                                       "column": 29
                                     },
                                     "end": {
-                                      "line": 59,
+                                      "line": 86,
                                       "column": 34
                                     }
                                   }
                                 },
                                 "range": [
-                                  1637,
-                                  1652
+                                  2684,
+                                  2699
                                 ],
                                 "loc": {
                                   "start": {
-                                    "line": 59,
+                                    "line": 86,
                                     "column": 19
                                   },
                                   "end": {
-                                    "line": 59,
+                                    "line": 86,
                                     "column": 34
                                   }
                                 }
@@ -2830,16 +2947,16 @@
                                       "type": "Identifier",
                                       "name": "value",
                                       "range": [
-                                        1670,
-                                        1675
+                                        2717,
+                                        2722
                                       ],
                                       "loc": {
                                         "start": {
-                                          "line": 60,
+                                          "line": 87,
                                           "column": 16
                                         },
                                         "end": {
-                                          "line": 60,
+                                          "line": 87,
                                           "column": 21
                                         }
                                       }
@@ -2851,16 +2968,16 @@
                                       "type": "Identifier",
                                       "name": "some",
                                       "range": [
-                                        1679,
-                                        1683
+                                        2726,
+                                        2730
                                       ],
                                       "loc": {
                                         "start": {
-                                          "line": 60,
+                                          "line": 87,
                                           "column": 25
                                         },
                                         "end": {
-                                          "line": 60,
+                                          "line": 87,
                                           "column": 29
                                         }
                                       }
@@ -2870,16 +2987,16 @@
                                         "type": "Identifier",
                                         "name": "validators",
                                         "range": [
-                                          1684,
-                                          1694
+                                          2731,
+                                          2741
                                         ],
                                         "loc": {
                                           "start": {
-                                            "line": 60,
+                                            "line": 87,
                                             "column": 30
                                           },
                                           "end": {
-                                            "line": 60,
+                                            "line": 87,
                                             "column": 40
                                           }
                                         }
@@ -2892,16 +3009,16 @@
                                             "type": "Identifier",
                                             "name": "validator",
                                             "range": [
-                                              1696,
-                                              1705
+                                              2743,
+                                              2752
                                             ],
                                             "loc": {
                                               "start": {
-                                                "line": 60,
+                                                "line": 87,
                                                 "column": 42
                                               },
                                               "end": {
-                                                "line": 60,
+                                                "line": 87,
                                                 "column": 51
                                               }
                                             }
@@ -2913,16 +3030,16 @@
                                             "type": "Identifier",
                                             "name": "validator",
                                             "range": [
-                                              1709,
-                                              1718
+                                              2756,
+                                              2765
                                             ],
                                             "loc": {
                                               "start": {
-                                                "line": 60,
+                                                "line": 87,
                                                 "column": 55
                                               },
                                               "end": {
-                                                "line": 60,
+                                                "line": 87,
                                                 "column": 64
                                               }
                                             }
@@ -2932,32 +3049,32 @@
                                               "type": "Identifier",
                                               "name": "value",
                                               "range": [
-                                                1719,
-                                                1724
+                                                2766,
+                                                2771
                                               ],
                                               "loc": {
                                                 "start": {
-                                                  "line": 60,
+                                                  "line": 87,
                                                   "column": 65
                                                 },
                                                 "end": {
-                                                  "line": 60,
+                                                  "line": 87,
                                                   "column": 70
                                                 }
                                               }
                                             }
                                           ],
                                           "range": [
-                                            1709,
-                                            1725
+                                            2756,
+                                            2772
                                           ],
                                           "loc": {
                                             "start": {
-                                              "line": 60,
+                                              "line": 87,
                                               "column": 55
                                             },
                                             "end": {
-                                              "line": 60,
+                                              "line": 87,
                                               "column": 71
                                             }
                                           }
@@ -2965,32 +3082,32 @@
                                         "generator": false,
                                         "expression": true,
                                         "range": [
-                                          1696,
-                                          1725
+                                          2743,
+                                          2772
                                         ],
                                         "loc": {
                                           "start": {
-                                            "line": 60,
+                                            "line": 87,
                                             "column": 42
                                           },
                                           "end": {
-                                            "line": 60,
+                                            "line": 87,
                                             "column": 71
                                           }
                                         }
                                       }
                                     ],
                                     "range": [
-                                      1679,
-                                      1726
+                                      2726,
+                                      2773
                                     ],
                                     "loc": {
                                       "start": {
-                                        "line": 60,
+                                        "line": 87,
                                         "column": 25
                                       },
                                       "end": {
-                                        "line": 60,
+                                        "line": 87,
                                         "column": 72
                                       }
                                     }
@@ -2998,63 +3115,63 @@
                                   "generator": false,
                                   "expression": true,
                                   "range": [
-                                    1670,
-                                    1726
+                                    2717,
+                                    2773
                                   ],
                                   "loc": {
                                     "start": {
-                                      "line": 60,
+                                      "line": 87,
                                       "column": 16
                                     },
                                     "end": {
-                                      "line": 60,
+                                      "line": 87,
                                       "column": 72
                                     }
                                   }
                                 }
                               ],
                               "range": [
-                                1637,
-                                1740
+                                2684,
+                                2787
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 59,
+                                  "line": 86,
                                   "column": 19
                                 },
                                 "end": {
-                                  "line": 61,
+                                  "line": 88,
                                   "column": 13
                                 }
                               }
                             },
                             "range": [
-                              1630,
-                              1741
+                              2677,
+                              2788
                             ],
                             "loc": {
                               "start": {
-                                "line": 59,
+                                "line": 86,
                                 "column": 12
                               },
                               "end": {
-                                "line": 61,
+                                "line": 88,
                                 "column": 14
                               }
                             }
                           }
                         ],
                         "range": [
-                          1616,
-                          1751
+                          2663,
+                          2798
                         ],
                         "loc": {
                           "start": {
-                            "line": 58,
+                            "line": 85,
                             "column": 36
                           },
                           "end": {
-                            "line": 62,
+                            "line": 89,
                             "column": 9
                           }
                         }
@@ -3069,78 +3186,78 @@
                               "value": false,
                               "raw": "false",
                               "range": [
-                                1778,
-                                1783
+                                2825,
+                                2830
                               ],
                               "loc": {
                                 "start": {
-                                  "line": 63,
+                                  "line": 90,
                                   "column": 19
                                 },
                                 "end": {
-                                  "line": 63,
+                                  "line": 90,
                                   "column": 24
                                 }
                               }
                             },
                             "range": [
-                              1771,
-                              1784
+                              2818,
+                              2831
                             ],
                             "loc": {
                               "start": {
-                                "line": 63,
+                                "line": 90,
                                 "column": 12
                               },
                               "end": {
-                                "line": 63,
+                                "line": 90,
                                 "column": 25
                               }
                             }
                           }
                         ],
                         "range": [
-                          1757,
-                          1794
+                          2804,
+                          2841
                         ],
                         "loc": {
                           "start": {
-                            "line": 62,
+                            "line": 89,
                             "column": 15
                           },
                           "end": {
-                            "line": 64,
+                            "line": 91,
                             "column": 9
                           }
                         }
                       },
                       "range": [
-                        1588,
-                        1794
+                        2635,
+                        2841
                       ],
                       "loc": {
                         "start": {
-                          "line": 58,
+                          "line": 85,
                           "column": 8
                         },
                         "end": {
-                          "line": 64,
+                          "line": 91,
                           "column": 9
                         }
                       }
                     }
                   ],
                   "range": [
-                    1578,
-                    1800
+                    2625,
+                    2847
                   ],
                   "loc": {
                     "start": {
-                      "line": 57,
+                      "line": 84,
                       "column": 31
                     },
                     "end": {
-                      "line": 65,
+                      "line": 92,
                       "column": 5
                     }
                   }
@@ -3148,47 +3265,47 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  1558,
-                  1800
+                  2605,
+                  2847
                 ],
                 "loc": {
                   "start": {
-                    "line": 57,
+                    "line": 84,
                     "column": 11
                   },
                   "end": {
-                    "line": 65,
+                    "line": 92,
                     "column": 5
                   }
                 }
               },
               "range": [
-                1551,
-                1801
+                2598,
+                2848
               ],
               "loc": {
                 "start": {
-                  "line": 57,
+                  "line": 84,
                   "column": 4
                 },
                 "end": {
-                  "line": 65,
+                  "line": 92,
                   "column": 6
                 }
               }
             }
           ],
           "range": [
-            1545,
-            1803
+            2592,
+            2850
           ],
           "loc": {
             "start": {
-              "line": 56,
+              "line": 83,
               "column": 42
             },
             "end": {
-              "line": 66,
+              "line": 93,
               "column": 1
             }
           }
@@ -3196,38 +3313,116 @@
         "generator": false,
         "expression": false,
         "range": [
-          1510,
-          1803
+          2557,
+          2850
         ],
         "loc": {
           "start": {
-            "line": 56,
+            "line": 83,
             "column": 7
           },
           "end": {
-            "line": 66,
+            "line": 93,
             "column": 1
           }
         },
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
+            "range": [
+              2059,
+              2549
+            ],
+            "loc": {
+              "start": {
+                "line": 70,
+                "column": 0
+              },
+              "end": {
+                "line": 82,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
+            "range": [
+              2853,
+              3184
+            ],
+            "loc": {
+              "start": {
+                "line": 96,
+                "column": 0
+              },
+              "end": {
+                "line": 107,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       "specifiers": [],
       "source": null,
       "range": [
-        1503,
-        1803
+        2550,
+        2850
       ],
       "loc": {
         "start": {
-          "line": 56,
+          "line": 83,
           "column": 0
         },
         "end": {
-          "line": 66,
+          "line": 93,
           "column": 1
         }
-      }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
+          "range": [
+            2059,
+            2549
+          ],
+          "loc": {
+            "start": {
+              "line": 70,
+              "column": 0
+            },
+            "end": {
+              "line": 82,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
+          "range": [
+            2853,
+            3184
+          ],
+          "loc": {
+            "start": {
+              "line": 96,
+              "column": 0
+            },
+            "end": {
+              "line": 107,
+              "column": 3
+            }
+          }
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
@@ -3237,16 +3432,16 @@
           "type": "Identifier",
           "name": "Exactly",
           "range": [
-            1822,
-            1829
+            3201,
+            3208
           ],
           "loc": {
             "start": {
-              "line": 69,
+              "line": 108,
               "column": 16
             },
             "end": {
-              "line": 69,
+              "line": 108,
               "column": 23
             }
           }
@@ -3256,16 +3451,16 @@
             "type": "Identifier",
             "name": "value",
             "range": [
-              1830,
-              1835
+              3209,
+              3214
             ],
             "loc": {
               "start": {
-                "line": 69,
+                "line": 108,
                 "column": 24
               },
               "end": {
-                "line": 69,
+                "line": 108,
                 "column": 29
               }
             }
@@ -3284,16 +3479,16 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      1850,
-                      1859
+                      3229,
+                      3238
                     ],
                     "loc": {
                       "start": {
-                        "line": 70,
+                        "line": 109,
                         "column": 11
                       },
                       "end": {
-                        "line": 70,
+                        "line": 109,
                         "column": 20
                       }
                     }
@@ -3306,16 +3501,16 @@
                     "type": "Identifier",
                     "name": "value",
                     "range": [
-                      1863,
-                      1868
+                      3242,
+                      3247
                     ],
                     "loc": {
                       "start": {
-                        "line": 70,
+                        "line": 109,
                         "column": 24
                       },
                       "end": {
-                        "line": 70,
+                        "line": 109,
                         "column": 29
                       }
                     }
@@ -3324,31 +3519,31 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      1873,
-                      1882
+                      3252,
+                      3261
                     ],
                     "loc": {
                       "start": {
-                        "line": 70,
+                        "line": 109,
                         "column": 34
                       },
                       "end": {
-                        "line": 70,
+                        "line": 109,
                         "column": 43
                       }
                     }
                   },
                   "range": [
-                    1863,
-                    1882
+                    3242,
+                    3261
                   ],
                   "loc": {
                     "start": {
-                      "line": 70,
+                      "line": 109,
                       "column": 24
                     },
                     "end": {
-                      "line": 70,
+                      "line": 109,
                       "column": 43
                     }
                   }
@@ -3356,47 +3551,47 @@
                 "generator": false,
                 "expression": true,
                 "range": [
-                  1850,
-                  1882
+                  3229,
+                  3261
                 ],
                 "loc": {
                   "start": {
-                    "line": 70,
+                    "line": 109,
                     "column": 11
                   },
                   "end": {
-                    "line": 70,
+                    "line": 109,
                     "column": 43
                   }
                 }
               },
               "range": [
-                1843,
-                1883
+                3222,
+                3262
               ],
               "loc": {
                 "start": {
-                  "line": 70,
+                  "line": 109,
                   "column": 4
                 },
                 "end": {
-                  "line": 70,
+                  "line": 109,
                   "column": 44
                 }
               }
             }
           ],
           "range": [
-            1837,
-            1885
+            3216,
+            3264
           ],
           "loc": {
             "start": {
-              "line": 69,
+              "line": 108,
               "column": 31
             },
             "end": {
-              "line": 71,
+              "line": 110,
               "column": 1
             }
           }
@@ -3404,38 +3599,116 @@
         "generator": false,
         "expression": false,
         "range": [
-          1813,
-          1885
+          3192,
+          3264
         ],
         "loc": {
           "start": {
-            "line": 69,
+            "line": 108,
             "column": 7
           },
           "end": {
-            "line": 71,
+            "line": 110,
             "column": 1
           }
         },
-        "leadingComments": [],
-        "trailingComments": []
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
+            "range": [
+              2853,
+              3184
+            ],
+            "loc": {
+              "start": {
+                "line": 96,
+                "column": 0
+              },
+              "end": {
+                "line": 107,
+                "column": 3
+              }
+            }
+          }
+        ],
+        "trailingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
+            "range": [
+              3267,
+              3695
+            ],
+            "loc": {
+              "start": {
+                "line": 113,
+                "column": 0
+              },
+              "end": {
+                "line": 126,
+                "column": 3
+              }
+            }
+          }
+        ]
       },
       "specifiers": [],
       "source": null,
       "range": [
-        1806,
-        1885
+        3185,
+        3264
       ],
       "loc": {
         "start": {
-          "line": 69,
+          "line": 108,
           "column": 0
         },
         "end": {
-          "line": 71,
+          "line": 110,
           "column": 1
         }
-      }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
+          "range": [
+            2853,
+            3184
+          ],
+          "loc": {
+            "start": {
+              "line": 96,
+              "column": 0
+            },
+            "end": {
+              "line": 107,
+              "column": 3
+            }
+          }
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
+          "range": [
+            3267,
+            3695
+          ],
+          "loc": {
+            "start": {
+              "line": 113,
+              "column": 0
+            },
+            "end": {
+              "line": 126,
+              "column": 3
+            }
+          }
+        }
+      ]
     },
     {
       "type": "ExportNamedDeclaration",
@@ -3445,16 +3718,16 @@
           "type": "Identifier",
           "name": "OneOf",
           "range": [
-            1904,
-            1909
+            3712,
+            3717
           ],
           "loc": {
             "start": {
-              "line": 74,
+              "line": 127,
               "column": 16
             },
             "end": {
-              "line": 74,
+              "line": 127,
               "column": 21
             }
           }
@@ -3466,31 +3739,31 @@
               "type": "Identifier",
               "name": "values",
               "range": [
-                1913,
-                1919
+                3721,
+                3727
               ],
               "loc": {
                 "start": {
-                  "line": 74,
+                  "line": 127,
                   "column": 25
                 },
                 "end": {
-                  "line": 74,
+                  "line": 127,
                   "column": 31
                 }
               }
             },
             "range": [
-              1910,
-              1919
+              3718,
+              3727
             ],
             "loc": {
               "start": {
-                "line": 74,
+                "line": 127,
                 "column": 22
               },
               "end": {
-                "line": 74,
+                "line": 127,
                 "column": 31
               }
             }
@@ -3509,16 +3782,16 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      1934,
-                      1943
+                      3742,
+                      3751
                     ],
                     "loc": {
                       "start": {
-                        "line": 75,
+                        "line": 128,
                         "column": 11
                       },
                       "end": {
-                        "line": 75,
+                        "line": 128,
                         "column": 20
                       }
                     }
@@ -3530,16 +3803,16 @@
                     "type": "Identifier",
                     "name": "some",
                     "range": [
-                      1947,
-                      1951
+                      3755,
+                      3759
                     ],
                     "loc": {
                       "start": {
-                        "line": 75,
+                        "line": 128,
                         "column": 24
                       },
                       "end": {
-                        "line": 75,
+                        "line": 128,
                         "column": 28
                       }
                     }
@@ -3549,16 +3822,16 @@
                       "type": "Identifier",
                       "name": "values",
                       "range": [
-                        1952,
-                        1958
+                        3760,
+                        3766
                       ],
                       "loc": {
                         "start": {
-                          "line": 75,
+                          "line": 128,
                           "column": 29
                         },
                         "end": {
-                          "line": 75,
+                          "line": 128,
                           "column": 35
                         }
                       }
@@ -3567,32 +3840,32 @@
                       "type": "Identifier",
                       "name": "Exactly",
                       "range": [
-                        1960,
-                        1967
+                        3768,
+                        3775
                       ],
                       "loc": {
                         "start": {
-                          "line": 75,
+                          "line": 128,
                           "column": 37
                         },
                         "end": {
-                          "line": 75,
+                          "line": 128,
                           "column": 44
                         }
                       }
                     }
                   ],
                   "range": [
-                    1947,
-                    1968
+                    3755,
+                    3776
                   ],
                   "loc": {
                     "start": {
-                      "line": 75,
+                      "line": 128,
                       "column": 24
                     },
                     "end": {
-                      "line": 75,
+                      "line": 128,
                       "column": 45
                     }
                   }
@@ -3600,47 +3873,47 @@
                 "generator": false,
                 "expression": true,
                 "range": [
-                  1934,
-                  1968
+                  3742,
+                  3776
                 ],
                 "loc": {
                   "start": {
-                    "line": 75,
+                    "line": 128,
                     "column": 11
                   },
                   "end": {
-                    "line": 75,
+                    "line": 128,
                     "column": 45
                   }
                 }
               },
               "range": [
-                1927,
-                1969
+                3735,
+                3777
               ],
               "loc": {
                 "start": {
-                  "line": 75,
+                  "line": 128,
                   "column": 4
                 },
                 "end": {
-                  "line": 75,
+                  "line": 128,
                   "column": 46
                 }
               }
             }
           ],
           "range": [
-            1921,
-            1971
+            3729,
+            3779
           ],
           "loc": {
             "start": {
-              "line": 74,
+              "line": 127,
               "column": 33
             },
             "end": {
-              "line": 76,
+              "line": 129,
               "column": 1
             }
           }
@@ -3648,44 +3921,83 @@
         "generator": false,
         "expression": false,
         "range": [
-          1895,
-          1971
+          3703,
+          3779
         ],
         "loc": {
           "start": {
-            "line": 74,
+            "line": 127,
             "column": 7
           },
           "end": {
-            "line": 76,
+            "line": 129,
             "column": 1
           }
         },
-        "leadingComments": [],
+        "leadingComments": [
+          {
+            "type": "Block",
+            "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
+            "range": [
+              3267,
+              3695
+            ],
+            "loc": {
+              "start": {
+                "line": 113,
+                "column": 0
+              },
+              "end": {
+                "line": 126,
+                "column": 3
+              }
+            }
+          }
+        ],
         "trailingComments": []
       },
       "specifiers": [],
       "source": null,
       "range": [
-        1888,
-        1971
+        3696,
+        3779
       ],
       "loc": {
         "start": {
-          "line": 74,
+          "line": 127,
           "column": 0
         },
         "end": {
-          "line": 76,
+          "line": 129,
           "column": 1
         }
-      }
+      },
+      "leadingComments": [
+        {
+          "type": "Block",
+          "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
+          "range": [
+            3267,
+            3695
+          ],
+          "loc": {
+            "start": {
+              "line": 113,
+              "column": 0
+            },
+            "end": {
+              "line": 126,
+              "column": 3
+            }
+          }
+        }
+      ]
     }
   ],
   "sourceType": "module",
   "range": [
     0,
-    1971
+    3779
   ],
   "loc": {
     "start": {
@@ -3693,17 +4005,17 @@
       "column": 0
     },
     "end": {
-      "line": 76,
+      "line": 129,
       "column": 1
     }
   },
   "comments": [
     {
       "type": "Block",
-      "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * @param {function} validators functions in pairs to match with each key-value pair\n * @returns {Boolean} true if valid\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
+      "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * @param {function} ...validators functions in pairs to match with each key-value pair\n * @returns {function} function returns true if passed a valid Map\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
       "range": [
         210,
-        721
+        755
       ],
       "loc": {
         "start": {
@@ -3712,6 +4024,78 @@
         },
         "end": {
           "line": 24,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
+      "range": [
+        1233,
+        1754
+      ],
+      "loc": {
+        "start": {
+          "line": 45,
+          "column": 0
+        },
+        "end": {
+          "line": 58,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
+      "range": [
+        2059,
+        2549
+      ],
+      "loc": {
+        "start": {
+          "line": 70,
+          "column": 0
+        },
+        "end": {
+          "line": 82,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
+      "range": [
+        2853,
+        3184
+      ],
+      "loc": {
+        "start": {
+          "line": 96,
+          "column": 0
+        },
+        "end": {
+          "line": 107,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "Block",
+      "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
+      "range": [
+        3267,
+        3695
+      ],
+      "loc": {
+        "start": {
+          "line": 113,
+          "column": 0
+        },
+        "end": {
+          "line": 126,
           "column": 3
         }
       }

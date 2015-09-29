@@ -67,8 +67,8 @@ function checkPair(pair, key, value) {
  *
  * Key-value entries in the map must satisfy at least one of the validator tuples.
  *
- * @param {function} validators functions in pairs to match with each key-value pair
- * @returns {Boolean} true if valid
+ * @param {function} ...validators functions in pairs to match with each key-value pair
+ * @returns {function} function returns true if passed a valid Map
  * @example
  * var isValid = MapSchema(isNumber, Exactly(&apos;hi&apos;), isString, isNumber);
  *
@@ -96,6 +96,20 @@ export function MapSchema(...validators) {
 }
 
 
+/**
+ * Generates a function that checks each value matches the validators passed,
+ * respective per index.
+ *
+ * @param {function} ...validators functions, in order, to check each value in the passed list
+ * @returns {function} which returns true if each element in list matches in order
+ * @example
+ * var schema = FixedListSchema(Exactly(&apos;roar&apos;), isNumber);
+ *
+ * schema(List.of(3));  // false
+ * schema(List.of(&apos;roar&apos;));  // false
+ * schema(List.of(&apos;fake roar&apos;));  // false
+ * schema(List.of(&apos;roar&apos;, 15));  // true
+ */
 export function FixedListSchema(...validators) {
     return function(candidate) {
         if (List.isList(candidate) &amp;&amp; candidate.size === validators.length) {
@@ -107,6 +121,19 @@ export function FixedListSchema(...validators) {
 }
 
 
+/**
+ * Generates a function that checks that each element of a List matches at least
+ * one of the passed validators.
+ *
+ * @param {function} ...validators functions to check each value in the passed list
+ * @returns {function} which returns true if each element in list matches at least one validator
+ * @example
+ * var schema = ListSchema(Exactly(&apos;roar&apos;), isNumber);
+ *
+ * schema(List.of(3));  // true
+ * schema(List.of(&apos;roar&apos;));  // true
+ * schema(List.of(3, &apos;fake roar&apos;));  // false
+ */
 export function ListSchema(...validators) {
     return function(candidate) {
         if (List.isList(candidate)) {
@@ -120,11 +147,37 @@ export function ListSchema(...validators) {
 }
 
 
+/**
+ * Convenience function that returns a function that validates strict equality.
+ *
+ * @param {*} value value to test equality
+ * @returns {function} evaluates strict equality of passed value
+ * @example
+ * var isExactly = Exactly(&apos;3&apos;);
+ *
+ * isExactly(&apos;hi&apos;);  // false
+ * isExactly(3);  // false
+ * isExactly(&apos;3&apos;);  // true
+ */
 export function Exactly(value) {
     return candidate =&gt; value === candidate;
 }
 
 
+/**
+ * Convenience function that returns a function that validates strict membership
+ * in passed arguments.
+ *
+ * @param {*} ...values collection of values to test membership upon
+ * @returns {function} evaluates membership of passed value
+ * @example
+ * var membership = OneOf(&apos;hi&apos;, &apos;3&apos;, 19);
+ *
+ * membership(&apos;hi&apos;);  // true
+ * membership(3);  // false
+ * membership(&apos;not in there&apos;);  // false
+ * membership(19);  // true
+ */
 export function OneOf(...values) {
     return candidate =&gt; some(values, Exactly);
 }

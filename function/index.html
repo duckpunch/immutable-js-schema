@@ -67,13 +67,13 @@
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="function/index.html#static-function-Exactly">Exactly</a></span></span><span data-ice="signature">(value: <span>*</span>): <span>*</span></span>
+           <span data-ice="name"><span><a href="function/index.html#static-function-Exactly">Exactly</a></span></span><span data-ice="signature">(value: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Convenience function that returns a function that validates strict equality.</p></div>
       </div>
     </td>
     <td>
@@ -92,13 +92,14 @@
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="function/index.html#static-function-FixedListSchema">FixedListSchema</a></span></span><span data-ice="signature">(validators: ...<span>*</span>): <span>*</span></span>
+           <span data-ice="name"><span><a href="function/index.html#static-function-FixedListSchema">FixedListSchema</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Generates a function that checks each value matches the validators passed,
+</p></div>
       </div>
     </td>
     <td>
@@ -117,13 +118,14 @@
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="function/index.html#static-function-ListSchema">ListSchema</a></span></span><span data-ice="signature">(validators: ...<span>*</span>): <span>*</span></span>
+           <span data-ice="name"><span><a href="function/index.html#static-function-ListSchema">ListSchema</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Generates a function that checks that each element of a List matches at least
+</p></div>
       </div>
     </td>
     <td>
@@ -142,7 +144,7 @@
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="function/index.html#static-function-MapSchema">MapSchema</a></span></span><span data-ice="signature">(validators: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+           <span data-ice="name"><span><a href="function/index.html#static-function-MapSchema">MapSchema</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
         </p>
       </div>
       <div>
@@ -167,13 +169,14 @@
     <td>
       <div>
         <p>
-           <span data-ice="name"><span><a href="function/index.html#static-function-OneOf">OneOf</a></span></span><span data-ice="signature">(values: ...<span>*</span>): <span>*</span></span>
+           <span data-ice="name"><span><a href="function/index.html#static-function-OneOf">OneOf</a></span></span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
         </p>
       </div>
       <div>
         
         
-        
+        <div data-ice="description"><p>Convenience function that returns a function that validates strict membership
+</p></div>
       </div>
     </td>
     <td>
@@ -193,18 +196,19 @@
     
     
     
-    <span data-ice="name">Exactly</span><span data-ice="signature">(value: <span>*</span>): <span>*</span></span>
+    <span data-ice="name">Exactly</span><span data-ice="signature">(value: <span>*</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber69">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber108">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {Exactly} from &apos;<span><a href="file/src/index.js.html#lineNumber69">immutable-schema</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {Exactly} from &apos;<span><a href="file/src/index.js.html#lineNumber108">immutable-schema</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>Convenience function that returns a function that validates strict equality.</p>
+</div>
 
   
 
@@ -220,7 +224,8 @@
       <td data-ice="name" data-depth="0">value</td>
       <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>value to test equality</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -231,8 +236,9 @@
     <h4>Return:</h4>
     <table>
       <tr>
-        <td class="return-type" data-ice="returnType"><span>*</span></td>
-        
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>evaluates strict equality of passed value</p>
+</td>
       </tr>
     </table>
     <div data-ice="returnProperties">
@@ -245,7 +251,18 @@
 
   
 
-  
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">var isExactly = Exactly(&apos;3&apos;);
+
+isExactly(&apos;hi&apos;);  // false
+isExactly(3);  // false
+isExactly(&apos;3&apos;);  // true</code></pre>
+    </div>
+</div>
 
   
 
@@ -259,18 +276,20 @@
     
     
     
-    <span data-ice="name">FixedListSchema</span><span data-ice="signature">(validators: ...<span>*</span>): <span>*</span></span>
+    <span data-ice="name">FixedListSchema</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber45">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber59">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {FixedListSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber45">immutable-schema</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {FixedListSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber59">immutable-schema</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>Generates a function that checks each value matches the validators passed,
+respective per index.</p>
+</div>
 
   
 
@@ -282,11 +301,12 @@
     </thead>
     <tbody>
     
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">validators</td>
-      <td data-ice="type">...<span>*</span></td>
+    <tr data-ice="property" data-depth="3">
+      <td data-ice="name" data-depth="3">...validators</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>functions, in order, to check each value in the passed list</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -297,8 +317,9 @@
     <h4>Return:</h4>
     <table>
       <tr>
-        <td class="return-type" data-ice="returnType"><span>*</span></td>
-        
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>which returns true if each element in list matches in order</p>
+</td>
       </tr>
     </table>
     <div data-ice="returnProperties">
@@ -311,7 +332,19 @@
 
   
 
-  
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">var schema = FixedListSchema(Exactly(&apos;roar&apos;), isNumber);
+
+schema(List.of(3));  // false
+schema(List.of(&apos;roar&apos;));  // false
+schema(List.of(&apos;fake roar&apos;));  // false
+schema(List.of(&apos;roar&apos;, 15));  // true</code></pre>
+    </div>
+</div>
 
   
 
@@ -325,18 +358,20 @@
     
     
     
-    <span data-ice="name">ListSchema</span><span data-ice="signature">(validators: ...<span>*</span>): <span>*</span></span>
+    <span data-ice="name">ListSchema</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber56">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber83">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {ListSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber56">immutable-schema</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {ListSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber83">immutable-schema</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>Generates a function that checks that each element of a List matches at least
+one of the passed validators.</p>
+</div>
 
   
 
@@ -348,11 +383,12 @@
     </thead>
     <tbody>
     
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">validators</td>
-      <td data-ice="type">...<span>*</span></td>
+    <tr data-ice="property" data-depth="3">
+      <td data-ice="name" data-depth="3">...validators</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>functions to check each value in the passed list</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -363,8 +399,9 @@
     <h4>Return:</h4>
     <table>
       <tr>
-        <td class="return-type" data-ice="returnType"><span>*</span></td>
-        
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>which returns true if each element in list matches at least one validator</p>
+</td>
       </tr>
     </table>
     <div data-ice="returnProperties">
@@ -377,7 +414,18 @@
 
   
 
-  
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">var schema = ListSchema(Exactly(&apos;roar&apos;), isNumber);
+
+schema(List.of(3));  // true
+schema(List.of(&apos;roar&apos;));  // true
+schema(List.of(3, &apos;fake roar&apos;));  // false</code></pre>
+    </div>
+</div>
 
   
 
@@ -391,7 +439,7 @@
     
     
     
-    <span data-ice="name">MapSchema</span><span data-ice="signature">(validators: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></span>
+    <span data-ice="name">MapSchema</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
     <span class="right-info">
       
       
@@ -416,8 +464,8 @@
     </thead>
     <tbody>
     
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">validators</td>
+    <tr data-ice="property" data-depth="3">
+      <td data-ice="name" data-depth="3">...validators</td>
       <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
       <td data-ice="appendix"></td>
       <td data-ice="description"><p>functions in pairs to match with each key-value pair</p>
@@ -432,8 +480,8 @@
     <h4>Return:</h4>
     <table>
       <tr>
-        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></span></td>
-        <td class="return-desc" data-ice="returnDescription"><p>true if valid</p>
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>function returns true if passed a valid Map</p>
 </td>
       </tr>
     </table>
@@ -472,18 +520,20 @@ isValid(Map().set(5, &apos;hi&apos;).set(&apos;foo&apos;, 3)); // true</code></p
     
     
     
-    <span data-ice="name">OneOf</span><span data-ice="signature">(values: ...<span>*</span>): <span>*</span></span>
+    <span data-ice="name">OneOf</span><span data-ice="signature">(): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber74">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber127">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {OneOf} from &apos;<span><a href="file/src/index.js.html#lineNumber74">immutable-schema</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {OneOf} from &apos;<span><a href="file/src/index.js.html#lineNumber127">immutable-schema</a></span>&apos;</code></pre></div>
   
   
-  
+  <div data-ice="description"><p>Convenience function that returns a function that validates strict membership
+in passed arguments.</p>
+</div>
 
   
 
@@ -495,11 +545,12 @@ isValid(Map().set(5, &apos;hi&apos;).set(&apos;foo&apos;, 3)); // true</code></p
     </thead>
     <tbody>
     
-    <tr data-ice="property" data-depth="0">
-      <td data-ice="name" data-depth="0">values</td>
-      <td data-ice="type">...<span>*</span></td>
+    <tr data-ice="property" data-depth="3">
+      <td data-ice="name" data-depth="3">...values</td>
+      <td data-ice="type"><span>*</span></td>
       <td data-ice="appendix"></td>
-      <td data-ice="description"></td>
+      <td data-ice="description"><p>collection of values to test membership upon</p>
+</td>
     </tr>
 </tbody>
   </table>
@@ -510,8 +561,9 @@ isValid(Map().set(5, &apos;hi&apos;).set(&apos;foo&apos;, 3)); // true</code></p
     <h4>Return:</h4>
     <table>
       <tr>
-        <td class="return-type" data-ice="returnType"><span>*</span></td>
-        
+        <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span></td>
+        <td class="return-desc" data-ice="returnDescription"><p>evaluates membership of passed value</p>
+</td>
       </tr>
     </table>
     <div data-ice="returnProperties">
@@ -524,7 +576,19 @@ isValid(Map().set(5, &apos;hi&apos;).set(&apos;foo&apos;, 3)); // true</code></p
 
   
 
-  
+  <div data-ice="example">
+    <h4>Example:</h4>
+    
+  <div class="example-doc" data-ice="exampleDoc">
+      
+      <pre class="prettyprint source-code"><code data-ice="exampleCode">var membership = OneOf(&apos;hi&apos;, &apos;3&apos;, 19);
+
+membership(&apos;hi&apos;);  // true
+membership(3);  // false
+membership(&apos;not in there&apos;);  // false
+membership(19);  // true</code></pre>
+    </div>
+</div>
 
   
 
