@@ -54,15 +54,18 @@
 <div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="immutable-js-schema">immutable-js-schema</h1>
 <p><a href="https://www.npmjs.com/package/immutable-schema"><img src="https://img.shields.io/npm/v/immutable-schema.svg" alt="npm"></a>
 <a href="https://travis-ci.org/duckpunch/immutable-js-schema"><img src="https://travis-ci.org/duckpunch/immutable-js-schema.svg" alt="Build Status"></a>
+<a href="http://duckpunch.github.io/immutable-js-schema/"><img src="http://duckpunch.github.io/immutable-js-schema/badge.svg" alt="Document"></a>
 <a href="https://david-dm.org/duckpunch/immutable-js-schema"><img src="https://david-dm.org/duckpunch/immutable-js-schema.svg" alt="Dependencies"></a></p>
 <p>Schema validator for immutable js structures</p>
 <h2 id="getting-started">Getting Started</h2>
 <p><code>npm install immutable-schema</code></p>
 <p>Then,</p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">import {ListSchema, MapSchema, Strict} from &apos;immutable-schema&apos;;</code>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import {
+    ListSchema, FixedListSchema, MapSchema, Exactly, OneOf
+} from &apos;immutable-schema&apos;;</code>
 </code></pre>
 <h2 id="examples">Examples</h2>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">const schema = ListSchema(isString, isNumber, Strict(&apos;greetings&apos;));
+<pre><code class="lang-javascript"><code class="source-code prettyprint">const schema = FixedListSchema(isString, isNumber, Exactly(&apos;greetings&apos;));
 const list = List.of(&apos;hi&apos;, 14.5, &apos;greetings&apos;);
 assert.ok(schema(list));</code>
 </code></pre>
