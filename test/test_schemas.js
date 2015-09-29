@@ -1,20 +1,20 @@
-import {ListSchema, MapSchema} from '../src/index.js';
+import {FixedListSchema, MapSchema} from '../src/index.js';
 import {isString, isNumber} from 'lodash';
 import {List, Map} from 'immutable';
 import assert from 'assert';
 
 
-describe('ListSchema', function() {
+describe('FixedListSchema', function() {
     it('validates simple conditions', function() {
-        assert.ok(ListSchema(isNumber)(List.of(4)));
+        assert.ok(FixedListSchema(isNumber)(List.of(4)));
     });
 
     it('notices when strings arent numbers', function() {
-        assert.ok(false === ListSchema(isNumber)(List.of('hi')));
+        assert.ok(false === FixedListSchema(isNumber)(List.of('hi')));
     });
 
     it('correctly tests order for 3 item lists', function() {
-        const schema = ListSchema(isString, isNumber, v => v === 'greetings');
+        const schema = FixedListSchema(isString, isNumber, v => v === 'greetings');
         const list = List.of('hi', 14.5, 'greetings');
         assert.ok(schema(list));
     });
