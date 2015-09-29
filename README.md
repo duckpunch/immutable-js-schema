@@ -5,7 +5,7 @@
 [![Document](http://duckpunch.github.io/immutable-js-schema/badge.svg)](http://duckpunch.github.io/immutable-js-schema/)
 [![Dependencies](https://david-dm.org/duckpunch/immutable-js-schema.svg)](https://david-dm.org/duckpunch/immutable-js-schema)
 
-Schema validator for immutable js structures
+Schema validator for [immutable-js](http://facebook.github.io/immutable-js/) structures
 
 ## Getting Started
 
