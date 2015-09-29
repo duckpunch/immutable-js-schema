@@ -1,0 +1,8 @@
+{
+  "source": "../immutable-js-schema/src",
+  "destination": ".",
+  "title": "immutable-schema",
+  "index": "../immutable-js-schema/README.md",
+  "package": "../immutable-js-schema/package.json",
+  "styles": ["./manual_overrides.css"]
+}
