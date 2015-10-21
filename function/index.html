@@ -200,11 +200,11 @@
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber108">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber110">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {Exactly} from &apos;<span><a href="file/src/index.js.html#lineNumber108">immutable-schema</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {Exactly} from &apos;<span><a href="file/src/index.js.html#lineNumber110">immutable-schema</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convenience function that returns a function that validates strict equality.</p>
@@ -280,11 +280,11 @@ isExactly(&apos;3&apos;);  // true</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber59">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber61">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {FixedListSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber59">immutable-schema</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {FixedListSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber61">immutable-schema</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Generates a function that checks each value matches the validators passed,
@@ -362,11 +362,11 @@ schema(List.of(&apos;roar&apos;, 15));  // true</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber83">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber85">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {ListSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber83">immutable-schema</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {ListSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber85">immutable-schema</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Generates a function that checks that each element of a List matches at least
@@ -443,15 +443,16 @@ schema(List.of(3, &apos;fake roar&apos;));  // false</code></pre>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber25">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber27">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {MapSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber25">immutable-schema</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {MapSchema} from &apos;<span><a href="file/src/index.js.html#lineNumber27">immutable-schema</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Creates a validator function based on passed validator 2-tuples.</p>
 <p>Key-value entries in the map must satisfy at least one of the validator tuples.</p>
+<p>TODO: Optional and required key/values</p>
 </div>
 
   
@@ -524,11 +525,11 @@ isValid(Map().set(5, &apos;hi&apos;).set(&apos;foo&apos;, 3)); // true</code></p
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber127">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/index.js.html#lineNumber129">source</a></span></span>
     </span>
   </h3>
 
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {OneOf} from &apos;<span><a href="file/src/index.js.html#lineNumber127">immutable-schema</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import {OneOf} from &apos;<span><a href="file/src/index.js.html#lineNumber129">immutable-schema</a></span>&apos;</code></pre></div>
   
   
   <div data-ice="description"><p>Convenience function that returns a function that validates strict membership
