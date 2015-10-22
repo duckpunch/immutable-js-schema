@@ -56,6 +56,9 @@
 import {Map, List} from &apos;immutable&apos;;
 
 
+/**
+ * @private
+ */
 function checkPair(pair, key, value) {
     const [key_check, value_check] = pair;
     return key_check(key) &amp;&amp; value_check(value);
