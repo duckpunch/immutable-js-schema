@@ -2,6 +2,9 @@ import {chunk, some} from 'lodash';
 import {Map, List} from 'immutable';
 
 
+/**
+ * @private
+ */
 function checkPair(pair, key, value) {
     const [key_check, value_check] = pair;
     return key_check(key) && value_check(value);
