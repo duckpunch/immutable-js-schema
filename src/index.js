@@ -6,9 +6,9 @@ import {Map, List} from 'immutable';
  * @private
  * Checks a key and value against callables given by a tuple of functions
  *
- * @param {Array}
- * @param {*}
- * @param {*}
+ * @param {Array} pair
+ * @param {*} key
+ * @param {*} value
  */
 function checkPair(pair, key, value) {
     const [key_check, value_check] = pair;
