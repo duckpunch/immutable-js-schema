@@ -291,10 +291,10 @@
       "trailingComments": [
         {
           "type": "Block",
-          "value": "*\n * @private\n * Checks a key and value against callables given by a tuple of functions\n *\n * @param {Array} pair\n * @param {*} key\n * @param {*} value\n * @returns\n ",
+          "value": "*\n * @private\n * Checks a key and value against callables given by a tuple of functions\n *\n * @param {Array} pair\n * @param {*} key\n * @param {*} value\n * @returns {Boolean}\n ",
           "range": [
             75,
-            244
+            254
           ],
           "loc": {
             "start": {
@@ -315,8 +315,8 @@
         "type": "Identifier",
         "name": "checkPair",
         "range": [
-          254,
-          263
+          264,
+          273
         ],
         "loc": {
           "start": {
@@ -334,8 +334,8 @@
           "type": "Identifier",
           "name": "pair",
           "range": [
-            264,
-            268
+            274,
+            278
           ],
           "loc": {
             "start": {
@@ -352,8 +352,8 @@
           "type": "Identifier",
           "name": "key",
           "range": [
-            270,
-            273
+            280,
+            283
           ],
           "loc": {
             "start": {
@@ -370,8 +370,8 @@
           "type": "Identifier",
           "name": "value",
           "range": [
-            275,
-            280
+            285,
+            290
           ],
           "loc": {
             "start": {
@@ -400,8 +400,8 @@
                       "type": "Identifier",
                       "name": "key_check",
                       "range": [
-                        295,
-                        304
+                        305,
+                        314
                       ],
                       "loc": {
                         "start": {
@@ -418,8 +418,8 @@
                       "type": "Identifier",
                       "name": "value_check",
                       "range": [
-                        306,
-                        317
+                        316,
+                        327
                       ],
                       "loc": {
                         "start": {
@@ -434,8 +434,8 @@
                     }
                   ],
                   "range": [
-                    294,
-                    318
+                    304,
+                    328
                   ],
                   "loc": {
                     "start": {
@@ -452,8 +452,8 @@
                   "type": "Identifier",
                   "name": "pair",
                   "range": [
-                    321,
-                    325
+                    331,
+                    335
                   ],
                   "loc": {
                     "start": {
@@ -467,8 +467,8 @@
                   }
                 },
                 "range": [
-                  294,
-                  325
+                  304,
+                  335
                 ],
                 "loc": {
                   "start": {
@@ -484,8 +484,8 @@
             ],
             "kind": "const",
             "range": [
-              288,
-              326
+              298,
+              336
             ],
             "loc": {
               "start": {
@@ -509,8 +509,8 @@
                   "type": "Identifier",
                   "name": "key_check",
                   "range": [
-                    338,
-                    347
+                    348,
+                    357
                   ],
                   "loc": {
                     "start": {
@@ -528,8 +528,8 @@
                     "type": "Identifier",
                     "name": "key",
                     "range": [
-                      348,
-                      351
+                      358,
+                      361
                     ],
                     "loc": {
                       "start": {
@@ -544,8 +544,8 @@
                   }
                 ],
                 "range": [
-                  338,
-                  352
+                  348,
+                  362
                 ],
                 "loc": {
                   "start": {
@@ -564,8 +564,8 @@
                   "type": "Identifier",
                   "name": "value_check",
                   "range": [
-                    356,
-                    367
+                    366,
+                    377
                   ],
                   "loc": {
                     "start": {
@@ -583,8 +583,8 @@
                     "type": "Identifier",
                     "name": "value",
                     "range": [
-                      368,
-                      373
+                      378,
+                      383
                     ],
                     "loc": {
                       "start": {
@@ -599,8 +599,8 @@
                   }
                 ],
                 "range": [
-                  356,
-                  374
+                  366,
+                  384
                 ],
                 "loc": {
                   "start": {
@@ -614,8 +614,8 @@
                 }
               },
               "range": [
-                338,
-                374
+                348,
+                384
               ],
               "loc": {
                 "start": {
@@ -629,8 +629,8 @@
               }
             },
             "range": [
-              331,
-              375
+              341,
+              385
             ],
             "loc": {
               "start": {
@@ -645,8 +645,8 @@
           }
         ],
         "range": [
-          282,
-          377
+          292,
+          387
         ],
         "loc": {
           "start": {
@@ -662,8 +662,8 @@
       "generator": false,
       "expression": false,
       "range": [
-        245,
-        377
+        255,
+        387
       ],
       "loc": {
         "start": {
@@ -678,10 +678,10 @@
       "leadingComments": [
         {
           "type": "Block",
-          "value": "*\n * @private\n * Checks a key and value against callables given by a tuple of functions\n *\n * @param {Array} pair\n * @param {*} key\n * @param {*} value\n * @returns\n ",
+          "value": "*\n * @private\n * Checks a key and value against callables given by a tuple of functions\n *\n * @param {Array} pair\n * @param {*} key\n * @param {*} value\n * @returns {Boolean}\n ",
           "range": [
             75,
-            244
+            254
           ],
           "loc": {
             "start": {
@@ -700,8 +700,8 @@
           "type": "Block",
           "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * TODO: Optional and required key/values\n *\n * @param {function} ...validators functions in pairs to match with each key-value pair\n * @returns {function} function returns true if passed a valid Map\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
           "range": [
-            380,
-            970
+            390,
+            980
           ],
           "loc": {
             "start": {
@@ -724,8 +724,8 @@
           "type": "Identifier",
           "name": "MapSchema",
           "range": [
-            987,
-            996
+            997,
+            1006
           ],
           "loc": {
             "start": {
@@ -745,8 +745,8 @@
               "type": "Identifier",
               "name": "validators",
               "range": [
-                1000,
-                1010
+                1010,
+                1020
               ],
               "loc": {
                 "start": {
@@ -760,8 +760,8 @@
               }
             },
             "range": [
-              997,
-              1010
+              1007,
+              1020
             ],
             "loc": {
               "start": {
@@ -787,8 +787,8 @@
                     "type": "Identifier",
                     "name": "pairs",
                     "range": [
-                      1024,
-                      1029
+                      1034,
+                      1039
                     ],
                     "loc": {
                       "start": {
@@ -807,8 +807,8 @@
                       "type": "Identifier",
                       "name": "chunk",
                       "range": [
-                        1032,
-                        1037
+                        1042,
+                        1047
                       ],
                       "loc": {
                         "start": {
@@ -826,8 +826,8 @@
                         "type": "Identifier",
                         "name": "validators",
                         "range": [
-                          1038,
-                          1048
+                          1048,
+                          1058
                         ],
                         "loc": {
                           "start": {
@@ -845,8 +845,8 @@
                         "value": 2,
                         "raw": "2",
                         "range": [
-                          1050,
-                          1051
+                          1060,
+                          1061
                         ],
                         "loc": {
                           "start": {
@@ -861,8 +861,8 @@
                       }
                     ],
                     "range": [
-                      1032,
-                      1052
+                      1042,
+                      1062
                     ],
                     "loc": {
                       "start": {
@@ -876,8 +876,8 @@
                     }
                   },
                   "range": [
-                    1024,
-                    1052
+                    1034,
+                    1062
                   ],
                   "loc": {
                     "start": {
@@ -893,8 +893,8 @@
               ],
               "kind": "const",
               "range": [
-                1018,
-                1053
+                1028,
+                1063
               ],
               "loc": {
                 "start": {
@@ -922,8 +922,8 @@
                       "type": "Identifier",
                       "name": "validators",
                       "range": [
-                        1062,
-                        1072
+                        1072,
+                        1082
                       ],
                       "loc": {
                         "start": {
@@ -940,8 +940,8 @@
                       "type": "Identifier",
                       "name": "length",
                       "range": [
-                        1073,
-                        1079
+                        1083,
+                        1089
                       ],
                       "loc": {
                         "start": {
@@ -955,8 +955,8 @@
                       }
                     },
                     "range": [
-                      1062,
-                      1079
+                      1072,
+                      1089
                     ],
                     "loc": {
                       "start": {
@@ -974,8 +974,8 @@
                     "value": 2,
                     "raw": "2",
                     "range": [
-                      1082,
-                      1083
+                      1092,
+                      1093
                     ],
                     "loc": {
                       "start": {
@@ -989,8 +989,8 @@
                     }
                   },
                   "range": [
-                    1062,
-                    1083
+                    1072,
+                    1093
                   ],
                   "loc": {
                     "start": {
@@ -1008,8 +1008,8 @@
                   "value": 1,
                   "raw": "1",
                   "range": [
-                    1088,
-                    1089
+                    1098,
+                    1099
                   ],
                   "loc": {
                     "start": {
@@ -1023,8 +1023,8 @@
                   }
                 },
                 "range": [
-                  1062,
-                  1089
+                  1072,
+                  1099
                 ],
                 "loc": {
                   "start": {
@@ -1047,8 +1047,8 @@
                       "value": "Must have even length of validators",
                       "raw": "'Must have even length of validators'",
                       "range": [
-                        1107,
-                        1144
+                        1117,
+                        1154
                       ],
                       "loc": {
                         "start": {
@@ -1062,8 +1062,8 @@
                       }
                     },
                     "range": [
-                      1101,
-                      1145
+                      1111,
+                      1155
                     ],
                     "loc": {
                       "start": {
@@ -1078,8 +1078,8 @@
                   }
                 ],
                 "range": [
-                  1091,
-                  1151
+                  1101,
+                  1161
                 ],
                 "loc": {
                   "start": {
@@ -1094,8 +1094,8 @@
               },
               "alternate": null,
               "range": [
-                1058,
-                1151
+                1068,
+                1161
               ],
               "loc": {
                 "start": {
@@ -1114,8 +1114,8 @@
                 "type": "Identifier",
                 "name": "validatePair",
                 "range": [
-                  1166,
-                  1178
+                  1176,
+                  1188
                 ],
                 "loc": {
                   "start": {
@@ -1133,8 +1133,8 @@
                   "type": "Identifier",
                   "name": "value",
                   "range": [
-                    1179,
-                    1184
+                    1189,
+                    1194
                   ],
                   "loc": {
                     "start": {
@@ -1151,8 +1151,8 @@
                   "type": "Identifier",
                   "name": "key",
                   "range": [
-                    1186,
-                    1189
+                    1196,
+                    1199
                   ],
                   "loc": {
                     "start": {
@@ -1177,8 +1177,8 @@
                         "type": "Identifier",
                         "name": "some",
                         "range": [
-                          1208,
-                          1212
+                          1218,
+                          1222
                         ],
                         "loc": {
                           "start": {
@@ -1196,8 +1196,8 @@
                           "type": "Identifier",
                           "name": "pairs",
                           "range": [
-                            1213,
-                            1218
+                            1223,
+                            1228
                           ],
                           "loc": {
                             "start": {
@@ -1218,8 +1218,8 @@
                               "type": "Identifier",
                               "name": "pair",
                               "range": [
-                                1220,
-                                1224
+                                1230,
+                                1234
                               ],
                               "loc": {
                                 "start": {
@@ -1239,8 +1239,8 @@
                               "type": "Identifier",
                               "name": "checkPair",
                               "range": [
-                                1228,
-                                1237
+                                1238,
+                                1247
                               ],
                               "loc": {
                                 "start": {
@@ -1258,8 +1258,8 @@
                                 "type": "Identifier",
                                 "name": "pair",
                                 "range": [
-                                  1238,
-                                  1242
+                                  1248,
+                                  1252
                                 ],
                                 "loc": {
                                   "start": {
@@ -1276,8 +1276,8 @@
                                 "type": "Identifier",
                                 "name": "key",
                                 "range": [
-                                  1244,
-                                  1247
+                                  1254,
+                                  1257
                                 ],
                                 "loc": {
                                   "start": {
@@ -1294,8 +1294,8 @@
                                 "type": "Identifier",
                                 "name": "value",
                                 "range": [
-                                  1249,
-                                  1254
+                                  1259,
+                                  1264
                                 ],
                                 "loc": {
                                   "start": {
@@ -1310,8 +1310,8 @@
                               }
                             ],
                             "range": [
-                              1228,
-                              1255
+                              1238,
+                              1265
                             ],
                             "loc": {
                               "start": {
@@ -1327,8 +1327,8 @@
                           "generator": false,
                           "expression": true,
                           "range": [
-                            1220,
-                            1255
+                            1230,
+                            1265
                           ],
                           "loc": {
                             "start": {
@@ -1343,8 +1343,8 @@
                         }
                       ],
                       "range": [
-                        1208,
-                        1256
+                        1218,
+                        1266
                       ],
                       "loc": {
                         "start": {
@@ -1358,8 +1358,8 @@
                       }
                     },
                     "range": [
-                      1201,
-                      1257
+                      1211,
+                      1267
                     ],
                     "loc": {
                       "start": {
@@ -1374,8 +1374,8 @@
                   }
                 ],
                 "range": [
-                  1191,
-                  1263
+                  1201,
+                  1273
                 ],
                 "loc": {
                   "start": {
@@ -1391,8 +1391,8 @@
               "generator": false,
               "expression": false,
               "range": [
-                1157,
-                1263
+                1167,
+                1273
               ],
               "loc": {
                 "start": {
@@ -1415,8 +1415,8 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      1285,
-                      1294
+                      1295,
+                      1304
                     ],
                     "loc": {
                       "start": {
@@ -1444,8 +1444,8 @@
                             "type": "Identifier",
                             "name": "Map",
                             "range": [
-                              1310,
-                              1313
+                              1320,
+                              1323
                             ],
                             "loc": {
                               "start": {
@@ -1462,8 +1462,8 @@
                             "type": "Identifier",
                             "name": "isMap",
                             "range": [
-                              1314,
-                              1319
+                              1324,
+                              1329
                             ],
                             "loc": {
                               "start": {
@@ -1477,8 +1477,8 @@
                             }
                           },
                           "range": [
-                            1310,
-                            1319
+                            1320,
+                            1329
                           ],
                           "loc": {
                             "start": {
@@ -1496,8 +1496,8 @@
                             "type": "Identifier",
                             "name": "candidate",
                             "range": [
-                              1320,
-                              1329
+                              1330,
+                              1339
                             ],
                             "loc": {
                               "start": {
@@ -1512,8 +1512,8 @@
                           }
                         ],
                         "range": [
-                          1310,
-                          1330
+                          1320,
+                          1340
                         ],
                         "loc": {
                           "start": {
@@ -1540,8 +1540,8 @@
                                   "type": "Identifier",
                                   "name": "candidate",
                                   "range": [
-                                    1353,
-                                    1362
+                                    1363,
+                                    1372
                                   ],
                                   "loc": {
                                     "start": {
@@ -1558,8 +1558,8 @@
                                   "type": "Identifier",
                                   "name": "every",
                                   "range": [
-                                    1363,
-                                    1368
+                                    1373,
+                                    1378
                                   ],
                                   "loc": {
                                     "start": {
@@ -1573,8 +1573,8 @@
                                   }
                                 },
                                 "range": [
-                                  1353,
-                                  1368
+                                  1363,
+                                  1378
                                 ],
                                 "loc": {
                                   "start": {
@@ -1592,8 +1592,8 @@
                                   "type": "Identifier",
                                   "name": "validatePair",
                                   "range": [
-                                    1369,
-                                    1381
+                                    1379,
+                                    1391
                                   ],
                                   "loc": {
                                     "start": {
@@ -1608,8 +1608,8 @@
                                 }
                               ],
                               "range": [
-                                1353,
-                                1382
+                                1363,
+                                1392
                               ],
                               "loc": {
                                 "start": {
@@ -1623,8 +1623,8 @@
                               }
                             },
                             "range": [
-                              1346,
-                              1383
+                              1356,
+                              1393
                             ],
                             "loc": {
                               "start": {
@@ -1639,8 +1639,8 @@
                           }
                         ],
                         "range": [
-                          1332,
-                          1393
+                          1342,
+                          1403
                         ],
                         "loc": {
                           "start": {
@@ -1663,8 +1663,8 @@
                               "value": false,
                               "raw": "false",
                               "range": [
-                                1420,
-                                1425
+                                1430,
+                                1435
                               ],
                               "loc": {
                                 "start": {
@@ -1678,8 +1678,8 @@
                               }
                             },
                             "range": [
-                              1413,
-                              1426
+                              1423,
+                              1436
                             ],
                             "loc": {
                               "start": {
@@ -1694,8 +1694,8 @@
                           }
                         ],
                         "range": [
-                          1399,
-                          1436
+                          1409,
+                          1446
                         ],
                         "loc": {
                           "start": {
@@ -1709,8 +1709,8 @@
                         }
                       },
                       "range": [
-                        1306,
-                        1436
+                        1316,
+                        1446
                       ],
                       "loc": {
                         "start": {
@@ -1725,8 +1725,8 @@
                     }
                   ],
                   "range": [
-                    1296,
-                    1442
+                    1306,
+                    1452
                   ],
                   "loc": {
                     "start": {
@@ -1742,8 +1742,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  1276,
-                  1442
+                  1286,
+                  1452
                 ],
                 "loc": {
                   "start": {
@@ -1757,8 +1757,8 @@
                 }
               },
               "range": [
-                1269,
-                1443
+                1279,
+                1453
               ],
               "loc": {
                 "start": {
@@ -1773,8 +1773,8 @@
             }
           ],
           "range": [
-            1012,
-            1445
+            1022,
+            1455
           ],
           "loc": {
             "start": {
@@ -1790,8 +1790,8 @@
         "generator": false,
         "expression": false,
         "range": [
-          978,
-          1445
+          988,
+          1455
         ],
         "loc": {
           "start": {
@@ -1808,8 +1808,8 @@
             "type": "Block",
             "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * TODO: Optional and required key/values\n *\n * @param {function} ...validators functions in pairs to match with each key-value pair\n * @returns {function} function returns true if passed a valid Map\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
             "range": [
-              380,
-              970
+              390,
+              980
             ],
             "loc": {
               "start": {
@@ -1828,8 +1828,8 @@
             "type": "Block",
             "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
             "range": [
-              1448,
-              1969
+              1458,
+              1979
             ],
             "loc": {
               "start": {
@@ -1847,8 +1847,8 @@
       "specifiers": [],
       "source": null,
       "range": [
-        971,
-        1445
+        981,
+        1455
       ],
       "loc": {
         "start": {
@@ -1865,8 +1865,8 @@
           "type": "Block",
           "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * TODO: Optional and required key/values\n *\n * @param {function} ...validators functions in pairs to match with each key-value pair\n * @returns {function} function returns true if passed a valid Map\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
           "range": [
-            380,
-            970
+            390,
+            980
           ],
           "loc": {
             "start": {
@@ -1885,8 +1885,8 @@
           "type": "Block",
           "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
           "range": [
-            1448,
-            1969
+            1458,
+            1979
           ],
           "loc": {
             "start": {
@@ -1909,8 +1909,8 @@
           "type": "Identifier",
           "name": "FixedListSchema",
           "range": [
-            1986,
-            2001
+            1996,
+            2011
           ],
           "loc": {
             "start": {
@@ -1930,8 +1930,8 @@
               "type": "Identifier",
               "name": "validators",
               "range": [
-                2005,
-                2015
+                2015,
+                2025
               ],
               "loc": {
                 "start": {
@@ -1945,8 +1945,8 @@
               }
             },
             "range": [
-              2002,
-              2015
+              2012,
+              2025
             ],
             "loc": {
               "start": {
@@ -1973,8 +1973,8 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      2039,
-                      2048
+                      2049,
+                      2058
                     ],
                     "loc": {
                       "start": {
@@ -2005,8 +2005,8 @@
                               "type": "Identifier",
                               "name": "List",
                               "range": [
-                                2064,
-                                2068
+                                2074,
+                                2078
                               ],
                               "loc": {
                                 "start": {
@@ -2023,8 +2023,8 @@
                               "type": "Identifier",
                               "name": "isList",
                               "range": [
-                                2069,
-                                2075
+                                2079,
+                                2085
                               ],
                               "loc": {
                                 "start": {
@@ -2038,8 +2038,8 @@
                               }
                             },
                             "range": [
-                              2064,
-                              2075
+                              2074,
+                              2085
                             ],
                             "loc": {
                               "start": {
@@ -2057,8 +2057,8 @@
                               "type": "Identifier",
                               "name": "candidate",
                               "range": [
-                                2076,
-                                2085
+                                2086,
+                                2095
                               ],
                               "loc": {
                                 "start": {
@@ -2073,8 +2073,8 @@
                             }
                           ],
                           "range": [
-                            2064,
-                            2086
+                            2074,
+                            2096
                           ],
                           "loc": {
                             "start": {
@@ -2097,8 +2097,8 @@
                               "type": "Identifier",
                               "name": "candidate",
                               "range": [
-                                2090,
-                                2099
+                                2100,
+                                2109
                               ],
                               "loc": {
                                 "start": {
@@ -2115,8 +2115,8 @@
                               "type": "Identifier",
                               "name": "size",
                               "range": [
-                                2100,
-                                2104
+                                2110,
+                                2114
                               ],
                               "loc": {
                                 "start": {
@@ -2130,8 +2130,8 @@
                               }
                             },
                             "range": [
-                              2090,
-                              2104
+                              2100,
+                              2114
                             ],
                             "loc": {
                               "start": {
@@ -2151,8 +2151,8 @@
                               "type": "Identifier",
                               "name": "validators",
                               "range": [
-                                2109,
-                                2119
+                                2119,
+                                2129
                               ],
                               "loc": {
                                 "start": {
@@ -2169,8 +2169,8 @@
                               "type": "Identifier",
                               "name": "length",
                               "range": [
-                                2120,
-                                2126
+                                2130,
+                                2136
                               ],
                               "loc": {
                                 "start": {
@@ -2184,8 +2184,8 @@
                               }
                             },
                             "range": [
-                              2109,
-                              2126
+                              2119,
+                              2136
                             ],
                             "loc": {
                               "start": {
@@ -2199,8 +2199,8 @@
                             }
                           },
                           "range": [
-                            2090,
-                            2126
+                            2100,
+                            2136
                           ],
                           "loc": {
                             "start": {
@@ -2214,8 +2214,8 @@
                           }
                         },
                         "range": [
-                          2064,
-                          2126
+                          2074,
+                          2136
                         ],
                         "loc": {
                           "start": {
@@ -2242,8 +2242,8 @@
                                   "type": "Identifier",
                                   "name": "candidate",
                                   "range": [
-                                    2149,
-                                    2158
+                                    2159,
+                                    2168
                                   ],
                                   "loc": {
                                     "start": {
@@ -2260,8 +2260,8 @@
                                   "type": "Identifier",
                                   "name": "every",
                                   "range": [
-                                    2159,
-                                    2164
+                                    2169,
+                                    2174
                                   ],
                                   "loc": {
                                     "start": {
@@ -2275,8 +2275,8 @@
                                   }
                                 },
                                 "range": [
-                                  2149,
-                                  2164
+                                  2159,
+                                  2174
                                 ],
                                 "loc": {
                                   "start": {
@@ -2298,8 +2298,8 @@
                                       "type": "Identifier",
                                       "name": "value",
                                       "range": [
-                                        2166,
-                                        2171
+                                        2176,
+                                        2181
                                       ],
                                       "loc": {
                                         "start": {
@@ -2316,8 +2316,8 @@
                                       "type": "Identifier",
                                       "name": "index",
                                       "range": [
-                                        2173,
-                                        2178
+                                        2183,
+                                        2188
                                       ],
                                       "loc": {
                                         "start": {
@@ -2340,8 +2340,8 @@
                                         "type": "Identifier",
                                         "name": "validators",
                                         "range": [
-                                          2183,
-                                          2193
+                                          2193,
+                                          2203
                                         ],
                                         "loc": {
                                           "start": {
@@ -2358,8 +2358,8 @@
                                         "type": "Identifier",
                                         "name": "index",
                                         "range": [
-                                          2194,
-                                          2199
+                                          2204,
+                                          2209
                                         ],
                                         "loc": {
                                           "start": {
@@ -2373,8 +2373,8 @@
                                         }
                                       },
                                       "range": [
-                                        2183,
-                                        2200
+                                        2193,
+                                        2210
                                       ],
                                       "loc": {
                                         "start": {
@@ -2392,8 +2392,8 @@
                                         "type": "Identifier",
                                         "name": "value",
                                         "range": [
-                                          2201,
-                                          2206
+                                          2211,
+                                          2216
                                         ],
                                         "loc": {
                                           "start": {
@@ -2408,8 +2408,8 @@
                                       }
                                     ],
                                     "range": [
-                                      2183,
-                                      2207
+                                      2193,
+                                      2217
                                     ],
                                     "loc": {
                                       "start": {
@@ -2425,8 +2425,8 @@
                                   "generator": false,
                                   "expression": true,
                                   "range": [
-                                    2165,
-                                    2207
+                                    2175,
+                                    2217
                                   ],
                                   "loc": {
                                     "start": {
@@ -2441,8 +2441,8 @@
                                 }
                               ],
                               "range": [
-                                2149,
-                                2208
+                                2159,
+                                2218
                               ],
                               "loc": {
                                 "start": {
@@ -2456,8 +2456,8 @@
                               }
                             },
                             "range": [
-                              2142,
-                              2209
+                              2152,
+                              2219
                             ],
                             "loc": {
                               "start": {
@@ -2472,8 +2472,8 @@
                           }
                         ],
                         "range": [
-                          2128,
-                          2219
+                          2138,
+                          2229
                         ],
                         "loc": {
                           "start": {
@@ -2496,8 +2496,8 @@
                               "value": false,
                               "raw": "false",
                               "range": [
-                                2246,
-                                2251
+                                2256,
+                                2261
                               ],
                               "loc": {
                                 "start": {
@@ -2511,8 +2511,8 @@
                               }
                             },
                             "range": [
-                              2239,
-                              2252
+                              2249,
+                              2262
                             ],
                             "loc": {
                               "start": {
@@ -2527,8 +2527,8 @@
                           }
                         ],
                         "range": [
-                          2225,
-                          2262
+                          2235,
+                          2272
                         ],
                         "loc": {
                           "start": {
@@ -2542,8 +2542,8 @@
                         }
                       },
                       "range": [
-                        2060,
-                        2262
+                        2070,
+                        2272
                       ],
                       "loc": {
                         "start": {
@@ -2558,8 +2558,8 @@
                     }
                   ],
                   "range": [
-                    2050,
-                    2268
+                    2060,
+                    2278
                   ],
                   "loc": {
                     "start": {
@@ -2575,8 +2575,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  2030,
-                  2268
+                  2040,
+                  2278
                 ],
                 "loc": {
                   "start": {
@@ -2590,8 +2590,8 @@
                 }
               },
               "range": [
-                2023,
-                2269
+                2033,
+                2279
               ],
               "loc": {
                 "start": {
@@ -2606,8 +2606,8 @@
             }
           ],
           "range": [
-            2017,
-            2271
+            2027,
+            2281
           ],
           "loc": {
             "start": {
@@ -2623,8 +2623,8 @@
         "generator": false,
         "expression": false,
         "range": [
-          1977,
-          2271
+          1987,
+          2281
         ],
         "loc": {
           "start": {
@@ -2641,8 +2641,8 @@
             "type": "Block",
             "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
             "range": [
-              1448,
-              1969
+              1458,
+              1979
             ],
             "loc": {
               "start": {
@@ -2661,8 +2661,8 @@
             "type": "Block",
             "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
             "range": [
-              2274,
-              2764
+              2284,
+              2774
             ],
             "loc": {
               "start": {
@@ -2680,8 +2680,8 @@
       "specifiers": [],
       "source": null,
       "range": [
-        1970,
-        2271
+        1980,
+        2281
       ],
       "loc": {
         "start": {
@@ -2698,8 +2698,8 @@
           "type": "Block",
           "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
           "range": [
-            1448,
-            1969
+            1458,
+            1979
           ],
           "loc": {
             "start": {
@@ -2718,8 +2718,8 @@
           "type": "Block",
           "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
           "range": [
-            2274,
-            2764
+            2284,
+            2774
           ],
           "loc": {
             "start": {
@@ -2742,8 +2742,8 @@
           "type": "Identifier",
           "name": "ListSchema",
           "range": [
-            2781,
-            2791
+            2791,
+            2801
           ],
           "loc": {
             "start": {
@@ -2763,8 +2763,8 @@
               "type": "Identifier",
               "name": "validators",
               "range": [
-                2795,
-                2805
+                2805,
+                2815
               ],
               "loc": {
                 "start": {
@@ -2778,8 +2778,8 @@
               }
             },
             "range": [
-              2792,
-              2805
+              2802,
+              2815
             ],
             "loc": {
               "start": {
@@ -2806,8 +2806,8 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      2829,
-                      2838
+                      2839,
+                      2848
                     ],
                     "loc": {
                       "start": {
@@ -2835,8 +2835,8 @@
                             "type": "Identifier",
                             "name": "List",
                             "range": [
-                              2854,
-                              2858
+                              2864,
+                              2868
                             ],
                             "loc": {
                               "start": {
@@ -2853,8 +2853,8 @@
                             "type": "Identifier",
                             "name": "isList",
                             "range": [
-                              2859,
-                              2865
+                              2869,
+                              2875
                             ],
                             "loc": {
                               "start": {
@@ -2868,8 +2868,8 @@
                             }
                           },
                           "range": [
-                            2854,
-                            2865
+                            2864,
+                            2875
                           ],
                           "loc": {
                             "start": {
@@ -2887,8 +2887,8 @@
                             "type": "Identifier",
                             "name": "candidate",
                             "range": [
-                              2866,
-                              2875
+                              2876,
+                              2885
                             ],
                             "loc": {
                               "start": {
@@ -2903,8 +2903,8 @@
                           }
                         ],
                         "range": [
-                          2854,
-                          2876
+                          2864,
+                          2886
                         ],
                         "loc": {
                           "start": {
@@ -2931,8 +2931,8 @@
                                   "type": "Identifier",
                                   "name": "candidate",
                                   "range": [
-                                    2899,
-                                    2908
+                                    2909,
+                                    2918
                                   ],
                                   "loc": {
                                     "start": {
@@ -2949,8 +2949,8 @@
                                   "type": "Identifier",
                                   "name": "every",
                                   "range": [
-                                    2909,
-                                    2914
+                                    2919,
+                                    2924
                                   ],
                                   "loc": {
                                     "start": {
@@ -2964,8 +2964,8 @@
                                   }
                                 },
                                 "range": [
-                                  2899,
-                                  2914
+                                  2909,
+                                  2924
                                 ],
                                 "loc": {
                                   "start": {
@@ -2987,8 +2987,8 @@
                                       "type": "Identifier",
                                       "name": "value",
                                       "range": [
-                                        2932,
-                                        2937
+                                        2942,
+                                        2947
                                       ],
                                       "loc": {
                                         "start": {
@@ -3008,8 +3008,8 @@
                                       "type": "Identifier",
                                       "name": "some",
                                       "range": [
-                                        2941,
-                                        2945
+                                        2951,
+                                        2955
                                       ],
                                       "loc": {
                                         "start": {
@@ -3027,8 +3027,8 @@
                                         "type": "Identifier",
                                         "name": "validators",
                                         "range": [
-                                          2946,
-                                          2956
+                                          2956,
+                                          2966
                                         ],
                                         "loc": {
                                           "start": {
@@ -3049,8 +3049,8 @@
                                             "type": "Identifier",
                                             "name": "validator",
                                             "range": [
-                                              2958,
-                                              2967
+                                              2968,
+                                              2977
                                             ],
                                             "loc": {
                                               "start": {
@@ -3070,8 +3070,8 @@
                                             "type": "Identifier",
                                             "name": "validator",
                                             "range": [
-                                              2971,
-                                              2980
+                                              2981,
+                                              2990
                                             ],
                                             "loc": {
                                               "start": {
@@ -3089,8 +3089,8 @@
                                               "type": "Identifier",
                                               "name": "value",
                                               "range": [
-                                                2981,
-                                                2986
+                                                2991,
+                                                2996
                                               ],
                                               "loc": {
                                                 "start": {
@@ -3105,8 +3105,8 @@
                                             }
                                           ],
                                           "range": [
-                                            2971,
-                                            2987
+                                            2981,
+                                            2997
                                           ],
                                           "loc": {
                                             "start": {
@@ -3122,8 +3122,8 @@
                                         "generator": false,
                                         "expression": true,
                                         "range": [
-                                          2958,
-                                          2987
+                                          2968,
+                                          2997
                                         ],
                                         "loc": {
                                           "start": {
@@ -3138,8 +3138,8 @@
                                       }
                                     ],
                                     "range": [
-                                      2941,
-                                      2988
+                                      2951,
+                                      2998
                                     ],
                                     "loc": {
                                       "start": {
@@ -3155,8 +3155,8 @@
                                   "generator": false,
                                   "expression": true,
                                   "range": [
-                                    2932,
-                                    2988
+                                    2942,
+                                    2998
                                   ],
                                   "loc": {
                                     "start": {
@@ -3171,8 +3171,8 @@
                                 }
                               ],
                               "range": [
-                                2899,
-                                3002
+                                2909,
+                                3012
                               ],
                               "loc": {
                                 "start": {
@@ -3186,8 +3186,8 @@
                               }
                             },
                             "range": [
-                              2892,
-                              3003
+                              2902,
+                              3013
                             ],
                             "loc": {
                               "start": {
@@ -3202,8 +3202,8 @@
                           }
                         ],
                         "range": [
-                          2878,
-                          3013
+                          2888,
+                          3023
                         ],
                         "loc": {
                           "start": {
@@ -3226,8 +3226,8 @@
                               "value": false,
                               "raw": "false",
                               "range": [
-                                3040,
-                                3045
+                                3050,
+                                3055
                               ],
                               "loc": {
                                 "start": {
@@ -3241,8 +3241,8 @@
                               }
                             },
                             "range": [
-                              3033,
-                              3046
+                              3043,
+                              3056
                             ],
                             "loc": {
                               "start": {
@@ -3257,8 +3257,8 @@
                           }
                         ],
                         "range": [
-                          3019,
-                          3056
+                          3029,
+                          3066
                         ],
                         "loc": {
                           "start": {
@@ -3272,8 +3272,8 @@
                         }
                       },
                       "range": [
-                        2850,
-                        3056
+                        2860,
+                        3066
                       ],
                       "loc": {
                         "start": {
@@ -3288,8 +3288,8 @@
                     }
                   ],
                   "range": [
-                    2840,
-                    3062
+                    2850,
+                    3072
                   ],
                   "loc": {
                     "start": {
@@ -3305,8 +3305,8 @@
                 "generator": false,
                 "expression": false,
                 "range": [
-                  2820,
-                  3062
+                  2830,
+                  3072
                 ],
                 "loc": {
                   "start": {
@@ -3320,8 +3320,8 @@
                 }
               },
               "range": [
-                2813,
-                3063
+                2823,
+                3073
               ],
               "loc": {
                 "start": {
@@ -3336,8 +3336,8 @@
             }
           ],
           "range": [
-            2807,
-            3065
+            2817,
+            3075
           ],
           "loc": {
             "start": {
@@ -3353,8 +3353,8 @@
         "generator": false,
         "expression": false,
         "range": [
-          2772,
-          3065
+          2782,
+          3075
         ],
         "loc": {
           "start": {
@@ -3371,8 +3371,8 @@
             "type": "Block",
             "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
             "range": [
-              2274,
-              2764
+              2284,
+              2774
             ],
             "loc": {
               "start": {
@@ -3391,8 +3391,8 @@
             "type": "Block",
             "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
             "range": [
-              3068,
-              3399
+              3078,
+              3409
             ],
             "loc": {
               "start": {
@@ -3410,8 +3410,8 @@
       "specifiers": [],
       "source": null,
       "range": [
-        2765,
-        3065
+        2775,
+        3075
       ],
       "loc": {
         "start": {
@@ -3428,8 +3428,8 @@
           "type": "Block",
           "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
           "range": [
-            2274,
-            2764
+            2284,
+            2774
           ],
           "loc": {
             "start": {
@@ -3448,8 +3448,8 @@
           "type": "Block",
           "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
           "range": [
-            3068,
-            3399
+            3078,
+            3409
           ],
           "loc": {
             "start": {
@@ -3472,8 +3472,8 @@
           "type": "Identifier",
           "name": "Exactly",
           "range": [
-            3416,
-            3423
+            3426,
+            3433
           ],
           "loc": {
             "start": {
@@ -3491,8 +3491,8 @@
             "type": "Identifier",
             "name": "value",
             "range": [
-              3424,
-              3429
+              3434,
+              3439
             ],
             "loc": {
               "start": {
@@ -3519,8 +3519,8 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      3444,
-                      3453
+                      3454,
+                      3463
                     ],
                     "loc": {
                       "start": {
@@ -3541,8 +3541,8 @@
                     "type": "Identifier",
                     "name": "value",
                     "range": [
-                      3457,
-                      3462
+                      3467,
+                      3472
                     ],
                     "loc": {
                       "start": {
@@ -3559,8 +3559,8 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      3467,
-                      3476
+                      3477,
+                      3486
                     ],
                     "loc": {
                       "start": {
@@ -3574,8 +3574,8 @@
                     }
                   },
                   "range": [
-                    3457,
-                    3476
+                    3467,
+                    3486
                   ],
                   "loc": {
                     "start": {
@@ -3591,8 +3591,8 @@
                 "generator": false,
                 "expression": true,
                 "range": [
-                  3444,
-                  3476
+                  3454,
+                  3486
                 ],
                 "loc": {
                   "start": {
@@ -3606,8 +3606,8 @@
                 }
               },
               "range": [
-                3437,
-                3477
+                3447,
+                3487
               ],
               "loc": {
                 "start": {
@@ -3622,8 +3622,8 @@
             }
           ],
           "range": [
-            3431,
-            3479
+            3441,
+            3489
           ],
           "loc": {
             "start": {
@@ -3639,8 +3639,8 @@
         "generator": false,
         "expression": false,
         "range": [
-          3407,
-          3479
+          3417,
+          3489
         ],
         "loc": {
           "start": {
@@ -3657,8 +3657,8 @@
             "type": "Block",
             "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
             "range": [
-              3068,
-              3399
+              3078,
+              3409
             ],
             "loc": {
               "start": {
@@ -3677,8 +3677,8 @@
             "type": "Block",
             "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
             "range": [
-              3482,
-              3910
+              3492,
+              3920
             ],
             "loc": {
               "start": {
@@ -3696,8 +3696,8 @@
       "specifiers": [],
       "source": null,
       "range": [
-        3400,
-        3479
+        3410,
+        3489
       ],
       "loc": {
         "start": {
@@ -3714,8 +3714,8 @@
           "type": "Block",
           "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
           "range": [
-            3068,
-            3399
+            3078,
+            3409
           ],
           "loc": {
             "start": {
@@ -3734,8 +3734,8 @@
           "type": "Block",
           "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
           "range": [
-            3482,
-            3910
+            3492,
+            3920
           ],
           "loc": {
             "start": {
@@ -3758,8 +3758,8 @@
           "type": "Identifier",
           "name": "OneOf",
           "range": [
-            3927,
-            3932
+            3937,
+            3942
           ],
           "loc": {
             "start": {
@@ -3779,8 +3779,8 @@
               "type": "Identifier",
               "name": "values",
               "range": [
-                3936,
-                3942
+                3946,
+                3952
               ],
               "loc": {
                 "start": {
@@ -3794,8 +3794,8 @@
               }
             },
             "range": [
-              3933,
-              3942
+              3943,
+              3952
             ],
             "loc": {
               "start": {
@@ -3822,8 +3822,8 @@
                     "type": "Identifier",
                     "name": "candidate",
                     "range": [
-                      3957,
-                      3966
+                      3967,
+                      3976
                     ],
                     "loc": {
                       "start": {
@@ -3843,8 +3843,8 @@
                     "type": "Identifier",
                     "name": "some",
                     "range": [
-                      3970,
-                      3974
+                      3980,
+                      3984
                     ],
                     "loc": {
                       "start": {
@@ -3862,8 +3862,8 @@
                       "type": "Identifier",
                       "name": "values",
                       "range": [
-                        3975,
-                        3981
+                        3985,
+                        3991
                       ],
                       "loc": {
                         "start": {
@@ -3880,8 +3880,8 @@
                       "type": "Identifier",
                       "name": "Exactly",
                       "range": [
-                        3983,
-                        3990
+                        3993,
+                        4000
                       ],
                       "loc": {
                         "start": {
@@ -3896,8 +3896,8 @@
                     }
                   ],
                   "range": [
-                    3970,
-                    3991
+                    3980,
+                    4001
                   ],
                   "loc": {
                     "start": {
@@ -3913,8 +3913,8 @@
                 "generator": false,
                 "expression": true,
                 "range": [
-                  3957,
-                  3991
+                  3967,
+                  4001
                 ],
                 "loc": {
                   "start": {
@@ -3928,8 +3928,8 @@
                 }
               },
               "range": [
-                3950,
-                3992
+                3960,
+                4002
               ],
               "loc": {
                 "start": {
@@ -3944,8 +3944,8 @@
             }
           ],
           "range": [
-            3944,
-            3994
+            3954,
+            4004
           ],
           "loc": {
             "start": {
@@ -3961,8 +3961,8 @@
         "generator": false,
         "expression": false,
         "range": [
-          3918,
-          3994
+          3928,
+          4004
         ],
         "loc": {
           "start": {
@@ -3979,8 +3979,8 @@
             "type": "Block",
             "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
             "range": [
-              3482,
-              3910
+              3492,
+              3920
             ],
             "loc": {
               "start": {
@@ -3999,8 +3999,8 @@
       "specifiers": [],
       "source": null,
       "range": [
-        3911,
-        3994
+        3921,
+        4004
       ],
       "loc": {
         "start": {
@@ -4017,8 +4017,8 @@
           "type": "Block",
           "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
           "range": [
-            3482,
-            3910
+            3492,
+            3920
           ],
           "loc": {
             "start": {
@@ -4037,7 +4037,7 @@
   "sourceType": "module",
   "range": [
     0,
-    3994
+    4004
   ],
   "loc": {
     "start": {
@@ -4052,10 +4052,10 @@
   "comments": [
     {
       "type": "Block",
-      "value": "*\n * @private\n * Checks a key and value against callables given by a tuple of functions\n *\n * @param {Array} pair\n * @param {*} key\n * @param {*} value\n * @returns\n ",
+      "value": "*\n * @private\n * Checks a key and value against callables given by a tuple of functions\n *\n * @param {Array} pair\n * @param {*} key\n * @param {*} value\n * @returns {Boolean}\n ",
       "range": [
         75,
-        244
+        254
       ],
       "loc": {
         "start": {
@@ -4072,8 +4072,8 @@
       "type": "Block",
       "value": "*\n * Creates a validator function based on passed validator 2-tuples.\n *\n * Key-value entries in the map must satisfy at least one of the validator tuples.\n *\n * TODO: Optional and required key/values\n *\n * @param {function} ...validators functions in pairs to match with each key-value pair\n * @returns {function} function returns true if passed a valid Map\n * @example\n * var isValid = MapSchema(isNumber, Exactly('hi'), isString, isNumber);\n *\n * isValid(Map().set(5, 'hi')); // true\n * isValid(Map().set('hi', 'hi')); // false\n * isValid(Map().set(5, 'hi').set('foo', 3)); // true\n ",
       "range": [
-        380,
-        970
+        390,
+        980
       ],
       "loc": {
         "start": {
@@ -4090,8 +4090,8 @@
       "type": "Block",
       "value": "*\n * Generates a function that checks each value matches the validators passed,\n * respective per index.\n *\n * @param {function} ...validators functions, in order, to check each value in the passed list\n * @returns {function} which returns true if each element in list matches in order\n * @example\n * var schema = FixedListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // false\n * schema(List.of('roar'));  // false\n * schema(List.of('fake roar'));  // false\n * schema(List.of('roar', 15));  // true\n ",
       "range": [
-        1448,
-        1969
+        1458,
+        1979
       ],
       "loc": {
         "start": {
@@ -4108,8 +4108,8 @@
       "type": "Block",
       "value": "*\n * Generates a function that checks that each element of a List matches at least\n * one of the passed validators.\n *\n * @param {function} ...validators functions to check each value in the passed list\n * @returns {function} which returns true if each element in list matches at least one validator\n * @example\n * var schema = ListSchema(Exactly('roar'), isNumber);\n *\n * schema(List.of(3));  // true\n * schema(List.of('roar'));  // true\n * schema(List.of(3, 'fake roar'));  // false\n ",
       "range": [
-        2274,
-        2764
+        2284,
+        2774
       ],
       "loc": {
         "start": {
@@ -4126,8 +4126,8 @@
       "type": "Block",
       "value": "*\n * Convenience function that returns a function that validates strict equality.\n *\n * @param {*} value value to test equality\n * @returns {function} evaluates strict equality of passed value\n * @example\n * var isExactly = Exactly('3');\n *\n * isExactly('hi');  // false\n * isExactly(3);  // false\n * isExactly('3');  // true\n ",
       "range": [
-        3068,
-        3399
+        3078,
+        3409
       ],
       "loc": {
         "start": {
@@ -4144,8 +4144,8 @@
       "type": "Block",
       "value": "*\n * Convenience function that returns a function that validates strict membership\n * in passed arguments.\n *\n * @param {*} ...values collection of values to test membership upon\n * @returns {function} evaluates membership of passed value\n * @example\n * var membership = OneOf('hi', '3', 19);\n *\n * membership('hi');  // true\n * membership(3);  // false\n * membership('not in there');  // false\n * membership(19);  // true\n ",
       "range": [
-        3482,
-        3910
+        3492,
+        3920
       ],
       "loc": {
         "start": {
