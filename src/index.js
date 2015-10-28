@@ -9,7 +9,7 @@ import {Map, List} from 'immutable';
  * @param {Array} pair
  * @param {*} key
  * @param {*} value
- * @returns {Boolean}
+ * @returns {Boolean} whether the key/value match the pair
  */
 function checkPair(pair, key, value) {
     const [key_check, value_check] = pair;
