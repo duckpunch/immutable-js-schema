@@ -7,8 +7,8 @@ import {Map, List} from 'immutable';
  * Checks a key and value against callables given by a tuple of functions
  *
  * @param {Array} pair
- * @param {*} key
- * @param {*} value
+ * @param {*} key any value to test
+ * @param {*} value any value to test
  * @returns {Boolean} whether the key/value match the pair
  */
 function checkPair(pair, key, value) {
