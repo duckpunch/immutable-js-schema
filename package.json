@@ -1,6 +1,6 @@
 {
   "name": "immutable-schema",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Schema validator for immutable js structures",
   "homepage": "https://github.com/duckpunch/immutable-js-schema",
   "repository": {
@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "immutable": "^3.7.5",
-    "lodash": "^3.10.1"
+    "lodash": "^4.5.1"
   },
   "browserify": {
     "transform": [
