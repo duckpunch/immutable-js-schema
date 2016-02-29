@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "immutable": "^3.7.5",
-    "lodash": "^3.10.1"
+    "lodash": "^4.5.1"
   },
   "browserify": {
     "transform": [
