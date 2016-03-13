@@ -20,7 +20,7 @@
     "longname": "src/index.js~checkPair",
     "access": "private",
     "export": false,
-    "importPath": "immutable-schema",
+    "importPath": "immutable-schema/src/index.js",
     "importStyle": null,
     "description": null,
     "lineNumber": 14,
@@ -81,7 +81,7 @@
     "longname": "src/index.js~MapSchema",
     "access": null,
     "export": true,
-    "importPath": "immutable-schema",
+    "importPath": "immutable-schema/src/index.js",
     "importStyle": "{MapSchema}",
     "description": "Creates a validator function based on passed validator 2-tuples.\n\nKey-value entries in the map must satisfy at least one of the validator tuples.\n\nTODO: Optional and required key/values",
     "examples": [
@@ -125,7 +125,7 @@
     "longname": "src/index.js~FixedListSchema",
     "access": null,
     "export": true,
-    "importPath": "immutable-schema",
+    "importPath": "immutable-schema/src/index.js",
     "importStyle": "{FixedListSchema}",
     "description": "Generates a function that checks each value matches the validators passed,\nrespective per index.",
     "examples": [
@@ -169,7 +169,7 @@
     "longname": "src/index.js~ListSchema",
     "access": null,
     "export": true,
-    "importPath": "immutable-schema",
+    "importPath": "immutable-schema/src/index.js",
     "importStyle": "{ListSchema}",
     "description": "Generates a function that checks that each element of a List matches at least\none of the passed validators.",
     "examples": [
@@ -213,7 +213,7 @@
     "longname": "src/index.js~Exactly",
     "access": null,
     "export": true,
-    "importPath": "immutable-schema",
+    "importPath": "immutable-schema/src/index.js",
     "importStyle": "{Exactly}",
     "description": "Convenience function that returns a function that validates strict equality.",
     "examples": [
@@ -257,7 +257,7 @@
     "longname": "src/index.js~OneOf",
     "access": null,
     "export": true,
-    "importPath": "immutable-schema",
+    "importPath": "immutable-schema/src/index.js",
     "importStyle": "{OneOf}",
     "description": "Convenience function that returns a function that validates strict membership\nin passed arguments.",
     "examples": [

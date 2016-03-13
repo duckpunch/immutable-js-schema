@@ -1,32 +1,32 @@
 window.esdocSearchIndex = [
   [
-    "immutable-schema~exactly",
+    "immutable-schema/src/index.js~exactly",
     "function/index.html#static-function-Exactly",
-    "<span>Exactly</span> <span class=\"search-result-import-path\">immutable-schema</span>",
+    "<span>Exactly</span> <span class=\"search-result-import-path\">immutable-schema/src/index.js</span>",
     "function"
   ],
   [
-    "immutable-schema~fixedlistschema",
+    "immutable-schema/src/index.js~fixedlistschema",
     "function/index.html#static-function-FixedListSchema",
-    "<span>FixedListSchema</span> <span class=\"search-result-import-path\">immutable-schema</span>",
+    "<span>FixedListSchema</span> <span class=\"search-result-import-path\">immutable-schema/src/index.js</span>",
     "function"
   ],
   [
-    "immutable-schema~listschema",
+    "immutable-schema/src/index.js~listschema",
     "function/index.html#static-function-ListSchema",
-    "<span>ListSchema</span> <span class=\"search-result-import-path\">immutable-schema</span>",
+    "<span>ListSchema</span> <span class=\"search-result-import-path\">immutable-schema/src/index.js</span>",
     "function"
   ],
   [
-    "immutable-schema~mapschema",
+    "immutable-schema/src/index.js~mapschema",
     "function/index.html#static-function-MapSchema",
-    "<span>MapSchema</span> <span class=\"search-result-import-path\">immutable-schema</span>",
+    "<span>MapSchema</span> <span class=\"search-result-import-path\">immutable-schema/src/index.js</span>",
     "function"
   ],
   [
-    "immutable-schema~oneof",
+    "immutable-schema/src/index.js~oneof",
     "function/index.html#static-function-OneOf",
-    "<span>OneOf</span> <span class=\"search-result-import-path\">immutable-schema</span>",
+    "<span>OneOf</span> <span class=\"search-result-import-path\">immutable-schema/src/index.js</span>",
     "function"
   ],
   [
