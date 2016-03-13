@@ -9,8 +9,7 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "mochify",
-    "watch-test": "mochify -w"
+    "test": "karma start"
   },
   "keywords": [],
   "author": "",
