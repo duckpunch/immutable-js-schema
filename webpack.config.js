@@ -5,8 +5,8 @@ module.exports = {
         './src/index'
     ],
     output: {
-        filename: 'immutable-js-schema.js',
-        path: path.join(__dirname, './dist'),
+        library: 'immutable-schema',
+        filename: path.join(__dirname, './dist/immutable-js-schema.js'),
         libraryTarget: 'umd'
     },
     module: {
