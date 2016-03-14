@@ -6,7 +6,8 @@ module.exports = {
     ],
     output: {
         filename: 'immutable-js-schema.js',
-        path: path.join(__dirname, './dist')
+        path: path.join(__dirname, './dist'),
+        libraryTarget: 'umd'
     },
     module: {
         loaders: [
